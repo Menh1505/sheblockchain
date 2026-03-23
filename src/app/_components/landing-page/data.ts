@@ -78,10 +78,20 @@ export const advantages = [
   },
 ] as const;
 
-export const partners = {
-  name: "SHE Blockchain partners",
-  src: "/partners/list.png",
-} as const;
+export const partners = [
+  { name: "Sandbox", src: "/partners/sandbox.svg", link: "https://www.sandbox.game/en/" },
+  { name: "Wallacy", src: "/partners/wallacy.svg", link: "https://wallacy.io/" },
+  { name: "HCA", src: "/partners/hca.svg", link: "https://www.hca.org.vn/" },
+  { name: "Twendee", src: "/partners/twendee.svg", link: "https://twendee.com.vn/" },
+  { name: "MoneyFi", src: "/partners/moneyfi.svg", link: "https://moneyfi.io/" },
+  { name: "Hutech", src: "/partners/hutech.svg", link: "https://www.hutech.edu.vn/" },
+  { name: "RMIT", src: "/partners/rmit.svg", link: "https://www.rmit.edu.vn/" },
+  { name: "Greenwich", src: "/partners/greenwich.svg", link: "https://greenwich.edu.vn/" },
+  { name: "SMU", src: "/partners/smu.svg", link: "https://www.smu.edu.sg/" },
+  { name: "UEH", src: "/partners/ueh.svg", link: "https://www.ueh.edu.vn/" },
+  { name: "FTU", src: "/partners/ftu.svg", link: "https://ftu.edu.vn/" },
+  { name: "Van Lang", src: "/partners/vanlang.svg", link: "https://www.vanlanguni.edu.vn/" },
+] as const;
 
 export const milestones = [
   {

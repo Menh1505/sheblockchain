@@ -3,30 +3,46 @@ import Image from "next/image";
 type PartnerImage = {
   name: string;
   src: string;
+  link: string;
 };
 
 type PartnersSectionProps = {
-  partners: PartnerImage;
+  partners: readonly PartnerImage[];
 };
 
 export function PartnersSection({ partners }: PartnersSectionProps) {
+  const marqueePartners = [...partners, ...partners];
+
   return (
-    <section id="partners" className="mx-auto max-w-7xl scroll-mt-32 px-4 py-8 sm:px-6 lg:px-8">
+    <section id="partners" className="mx-auto scroll-mt-32 px-4 py-8 sm:px-6 lg:px-8">
       <div className="overflow-hidden rounded-[28px] border-2 border-[#5eba46] bg-white shadow-[0_16px_50px_rgba(36,82,47,0.08)]">
-        <div className="bg-[#0f6a33] px-6 py-4 text-center text-2xl font-black uppercase tracking-wide text-white">
+        <div className="bg-[#0f6a33] px-6 py-4 text-center text-4xl font-black uppercase tracking-wide text-[#ccffe0]">
           Partners
         </div>
-        <div className="px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-[#fafdf8] p-3 sm:p-4">
-            <Image
-              src={partners.src}
-              alt={partners.name}
-              width={1600}
-              height={900}
-              sizes="100vw"
-              className="h-auto w-full rounded-2xl object-contain"
-              priority
-            />
+
+        <div className="relative overflow-hidden rounded-3xl">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-[#fafdf8] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-[#fafdf8] to-transparent" />
+
+          <div className="partners-marquee flex w-max gap-8">
+            {marqueePartners.map((partner, index) => (
+              <a
+                key={`${partner.name}-${index}`}
+                href={partner.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={partner.name}
+                className="flex h-48 w-96 shrink-0 items-center justify-center rounded-3xl transition hover:scale-[1.2]"
+              >
+                <Image
+                  src={partner.src}
+                  alt={partner.name}
+                  width={240}
+                  height={460}
+                  className="h-auto max-h-48 object-contain"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>
