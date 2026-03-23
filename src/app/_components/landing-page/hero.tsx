@@ -35,7 +35,7 @@ export function Hero({ highlights }: HeroProps) {
     <section id="home" className="relative overflow-hidden scroll-mt-32 px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pb-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(111,190,76,0.25),transparent_34%),linear-gradient(180deg,#f6faf4_0%,#edf7e5_100%)]" />
       <div className="relative">
-        <div className="grid h-full overflow-hidden rounded-[38px] border border-[#d8ebcb] bg-[#dff0d0] shadow-[0_24px_70px_rgba(31,73,56,0.18)] lg:min-h-[720px] lg:grid-cols-[88px_minmax(0,1fr)_minmax(420px,0.92fr)]">
+        <div className="grid h-full overflow-hidden rounded-[38px] border border-[#d8ebcb] bg-[#dff0d0] shadow-[0_24px_70px_rgba(31,73,56,0.18)] lg:min-h-180 lg:grid-cols-[88px_minmax(0,1fr)_minmax(420px,0.92fr)]">
           <div className="hidden h-full border-r border-[#c4deaf] lg:flex lg:flex-col lg:items-center lg:justify-between lg:px-4 lg:py-8">
             <div className="flex flex-col items-center gap-3">
               {socialLinks.map((item) => (
@@ -84,7 +84,7 @@ export function Hero({ highlights }: HeroProps) {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a
                     href="#mission"
-                    className="inline-flex items-center justify-center rounded-full border-2 border-black bg-[#8ed15f] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-black shadow-[6px_6px_0_#000] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0_#000]"
+                    className="inline-flex items-center justify-center rounded-full border-2 border-black bg-[#8ed15f] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-black shadow-[6px_6px_0_#000] transition hover:translate-x-px hover:translate-y-px hover:shadow-[3px_3px_0_#000]"
                   >
                     Our Vision &amp; Mission
                   </a>
