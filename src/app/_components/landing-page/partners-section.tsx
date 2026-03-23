@@ -1,5 +1,12 @@
+import Image from "next/image";
+
+type PartnerImage = {
+  name: string;
+  src: string;
+};
+
 type PartnersSectionProps = {
-  partners: readonly string[];
+  partners: PartnerImage;
 };
 
 export function PartnersSection({ partners }: PartnersSectionProps) {
@@ -9,15 +16,18 @@ export function PartnersSection({ partners }: PartnersSectionProps) {
         <div className="bg-[#0f6a33] px-6 py-4 text-center text-2xl font-black uppercase tracking-wide text-white">
           Partners
         </div>
-        <div className="grid gap-4 px-6 py-8 sm:grid-cols-2 sm:px-8 lg:grid-cols-3 xl:grid-cols-4">
-          {partners.map((partner) => (
-            <div
-              key={partner}
-              className="flex min-h-[88px] items-center justify-center rounded-2xl border border-[#e5f0dd] bg-[#fafdf8] px-4 text-center text-xl font-extrabold text-[#274f3f]"
-            >
-              {partner}
-            </div>
-          ))}
+        <div className="px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+          <div className="relative overflow-hidden rounded-3xl bg-[#fafdf8] p-3 sm:p-4">
+            <Image
+              src={partners.src}
+              alt={partners.name}
+              width={1600}
+              height={900}
+              sizes="100vw"
+              className="h-auto w-full rounded-2xl object-contain"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

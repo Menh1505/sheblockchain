@@ -30,33 +30,27 @@ export const services = [
 export const activities = [
   {
     title: "Blockchain training course",
-    image:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+    image: "/act/act1.svg",
   },
   {
     title: "Industrial Experience Program",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+    image: "/act/act2.svg",
   },
   {
     title: "Unitour Program",
-    image:
-      "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1200&q=80",
+    image: "/act/act3.svg",
   },
   {
     title: "Blockchain training course",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    image: "/act/act4.svg",
   },
   {
     title: "Industrial Experience Program",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+    image: "/act/act5.svg",
   },
   {
     title: "Unitour Program",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    image: "/act/act6.svg",
   },
 ] as const;
 
@@ -81,20 +75,10 @@ export const advantages = [
   },
 ] as const;
 
-export const partners = [
-  "The Sandbox",
-  "Wallacy",
-  "HCA",
-  "TWENDEE SOFTWARE",
-  "MoneyFi",
-  "HUTECH University",
-  "RMIT University",
-  "University of Greenwich",
-  "SMU",
-  "UEH University",
-  "HCMUT",
-  "Van Lang University",
-] as const;
+export const partners = {
+  name: "SHE Blockchain partners",
+  src: "/partners/list.png",
+} as const;
 
 export const milestones = [
   {
