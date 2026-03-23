@@ -52,6 +52,15 @@ export function Footer() {
                     contact@she-blockchain-e9e089.ingress-baronn.ewp.live
                   </a>
                 </p>
+                <p>
+                  Telegram:{" "}
+                  <a
+                    href="https://t.me/sheblockchain"
+                    className="break-all font-semibold text-white transition hover:text-[#c9f39f]"
+                  >
+                    S.H.E Blockchain group
+                  </a>
+                </p>
               </div>
             </div>
 

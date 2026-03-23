@@ -37,6 +37,12 @@ const teamMembers = [
     role: "Founder of S.H.E Blockchain",
     description: "5 years of experience in Blockchain & Crypto.",
   },
+  {
+    imageSrc: "/team/ryan.jpg",
+    name: "Ryan Pham",
+    role: "Co-founder",
+    description: "Entrepreneur and product builder. 12 years of experience in Blockchain & Crypto",
+  },
 ] as const;
 
 export function TeamSection() {
