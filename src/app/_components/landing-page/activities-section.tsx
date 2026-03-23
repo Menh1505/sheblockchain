@@ -19,9 +19,9 @@ export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
         {activities.map((activity, index) => (
           <div
             key={`${activity.title}-${index}`}
-            className="group overflow-hidden rounded-[24px] border border-[#d9ebce] bg-white shadow-[0_14px_40px_rgba(36,82,47,0.08)]"
+            className="group overflow-hidden rounded-3xl border border-[#d9ebce] bg-white shadow-[0_14px_40px_rgba(36,82,47,0.08)]"
           >
-            <div className="flex min-h-[72px] items-center justify-center border-b border-[#ecf4e7] bg-[#eef6e7] px-4 text-center text-xl font-bold text-[#24523f]">
+            <div className="flex min-h-18 items-center justify-center border-b border-[#ecf4e7] bg-[#eef6e7] px-4 text-center text-xl font-bold text-[#24523f]">
               {activity.title}
             </div>
             <div className="relative h-56 overflow-hidden">
