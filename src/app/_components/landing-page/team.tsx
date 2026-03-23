@@ -3,7 +3,7 @@ import { ProfileCard } from "../profile-card";
 const teamMembers = [
   {
     imageSrc: "/team/cris.jpg",
-    name: "Cris D Nguyen",
+    name: "Cris D Tran",
     role: "Head of Growth, Vietnam",
     description: "Founding Advisor of FLI Vietnam. 8 years of experience in Blockchain & Crypto.",
   },
