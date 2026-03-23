@@ -1,7 +1,16 @@
 export const highlights = [
-  "Education & Career Oriented",
-  "Exploration and Exploitation Web 3 Space",
-  "Enhance your branding exposure",
+  {
+    name: "Education & Career Oriented",
+    image: "/hero/hero1.svg",
+  },
+  {
+    name: "Exploration and Exploitation Web 3 Space",
+    image: "/hero/hero2.svg",
+  },
+  {
+    name: "Enhance your branding exposure",
+    image: "/hero/hero3.svg",
+  },
 ] as const;
 
 export const services = [
@@ -41,37 +50,31 @@ export const activities = [
     image: "/act/act3.svg",
   },
   {
-    title: "Blockchain training course",
+    title: "",
     image: "/act/act4.svg",
   },
   {
-    title: "Industrial Experience Program",
+    title: "",
     image: "/act/act5.svg",
   },
   {
-    title: "Unitour Program",
+    title: "",
     image: "/act/act6.svg",
   },
 ] as const;
 
 export const advantages = [
   {
-    title: "Outstanding Expertise",
-    description:
-      "The founding team are experts recognized by the international community have over 6 years of experience in web3 space.",
-    icon: "expertise",
+    name: "Outstanding Expertise",
+    image: "/ca/ca1.svg",
   },
   {
-    title: "Intensive Network",
-    description:
-      "Strong relationship with 50+ partners are Government agencies, Enterprises, Universities, Communities & KOLs.",
-    icon: "network",
+    name: "Intensive Network",
+    image: "/ca/ca2.svg",
   },
   {
-    title: "Professional & Dedicate",
-    description:
-      "Dedication, Responsibility, Enthusiasm, and Prioritizing the customer first are our collaborative values",
-    icon: "shield",
+    name: "Professional & Dedicate",
+    image: "/ca/ca3.svg",
   },
 ] as const;
 

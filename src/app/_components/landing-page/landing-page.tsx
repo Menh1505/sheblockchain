@@ -1,4 +1,4 @@
-import { activities, advantages, highlights, milestones, partners, services } from "./data";
+import { activities, advantages, highlights, partners } from "./data";
 import { ActivitiesSection } from "./activities-section";
 import { CompanyOverviewSection } from "./company-overview-section";
 import { CompetitiveAdvantagesSection } from "./competitive-advantages-section";
@@ -15,11 +15,11 @@ export function LandingPage() {
       <Header />
       <Hero highlights={highlights} />
       <MissionVisionSection />
-      <CompanyOverviewSection services={services} />
+      <CompanyOverviewSection />
       <ActivitiesSection activities={activities} />
       <CompetitiveAdvantagesSection advantages={advantages} />
       <PartnersSection partners={partners} />
-      <MilestonesSection milestones={milestones} />
+      <MilestonesSection />
       <Footer />
     </div>
   );
