@@ -11,10 +11,10 @@ const services = [
 export function Footer() {
   return (
     <footer id="contact" className="mt-10 bg-[#0f6a33] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-10 lg:grid-cols-3">
-          <div className="space-y-5">
-            <div className="inline-flex items-center rounded-[28px] bg-white px-4 py-3 shadow-lg shadow-black/10">
+      <div className="ml-56 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid gap-10 lg:grid-cols-4">
+          <div className="space-y-5 lg:col-span-2">
+            <div className="inline-flex items-center rounded-[28px] bg-white px-8 py-3 shadow-lg shadow-black/10">
               <Image
                 src="/she-logo.png"
                 alt="S.H.E Blockchain"
@@ -31,7 +31,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-5 lg:col-span-1">
             <h5 className="text-xl font-extrabold uppercase tracking-[0.12em] text-white">Contact Information</h5>
             <div className="h-1 w-20 rounded-full bg-[#8ed15f]" />
             <div className="space-y-4 text-sm leading-7 text-white/85 sm:text-base">
@@ -54,7 +54,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-5 lg:col-span-1">
             <h5 className="text-xl font-extrabold uppercase tracking-[0.12em] text-white">Services</h5>
             <div className="h-1 w-20 rounded-full bg-[#8ed15f]" />
             <ul className="space-y-3 text-sm text-white/85 sm:text-base">
