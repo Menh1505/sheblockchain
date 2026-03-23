@@ -11,7 +11,7 @@ type HeroProps = {
 
 export function Hero({ highlights }: HeroProps) {
   return (
-    <section className="relative overflow-hidden">
+    <section id="home" className="relative overflow-hidden scroll-mt-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(111,190,76,0.18),transparent_40%)]" />
       <div className="relative mx-auto w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
         <div className="mx-auto w-full text-center">

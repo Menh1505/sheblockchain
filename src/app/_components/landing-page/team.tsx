@@ -1,0 +1,79 @@
+import { ProfileCard } from "../profile-card";
+
+const teamMembers = [
+  {
+    imageSrc: "/team/cris.jpg",
+    name: "Cris D Nguyen",
+    role: "Head of Growth, Vietnam",
+    description: "Founding Advisor of FLI Vietnam. 8 years of experience in Blockchain & Crypto.",
+  },
+  {
+    imageSrc: "/team/jasontran.jpg",
+    name: "Jason Tran",
+    role: "Founder & CEO of Wallacy",
+    description: "17 years in Management, Marketing, Product Development and Fundraising. 5 years of experience in Blockchain & Crypto",
+  },
+  {
+    imageSrc: "/team/pavendo.jpg",
+    name: "Paven Do",
+    role: "Co-founder & CEO of Octan Network and BrownFi",
+    description: "6 years of experience as a blockchain scientist and entrepreneur.",
+  },
+  {
+    imageSrc: "/team/phongdao.jpg",
+    name: "Phong Dao",
+    role: "Lawyer",
+    description: "Managing lawyer at Investpush Legal. 7 years of experience in Blockchain & Crypto",
+  },
+  {
+    imageSrc: "/team/phongnguyen.jpg",
+    name: "Phong Nguyen",
+    role: "Master of Computer Science",
+    description: "Operation Center Manager at Ozitem Group, France. 7 years of experience in Blockchain & Crypto",
+  },
+  {
+    imageSrc: "/team/thuylinh.jpg",
+    name: "Thuy Linh",
+    role: "Founder of S.H.E Blockchain",
+    description: "5 years of experience in Blockchain & Crypto.",
+  },
+  {
+    imageSrc: "/team/cris.jpg",
+    name: "cris",
+    role: "Education Coordinator",
+    description: "Supporting curriculum planning and learner experience to make Web3 education more accessible.",
+  },
+  {
+    imageSrc: "/team/jasontran.jpg",
+    name: "jason",
+    role: "Business Development",
+    description: "Driving collaboration opportunities and turning new connections into scalable growth initiatives.",
+  },
+] as const;
+
+export function TeamSection() {
+  return (
+    <section id="team" className="w-full scroll-mt-32 px-10 py-8 sm:px-6 lg:px-8">
+      <div className="mb-8 text-center">
+        <h2 className="text-3xl mb-2 font-black uppercase text-[#116b35] sm:text-4xl">Our Team</h2>
+        <h2 className="text-4xl font-black uppercase text-[#000000] sm:text-5xl">Speak With One of Our Experts</h2>
+      </div>
+
+      <div className="-mx-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="flex min-w-max gap-6">
+          {teamMembers.map((member, index) => (
+            <ProfileCard
+              key={`${member.name}-${index}`}
+              imageSrc={member.imageSrc}
+              name={member.name}
+              role={member.role}
+              description={member.description}
+              className="w-70 shrink-0 sm:w-75 lg:w-[320px]"
+              priority={index < 2}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

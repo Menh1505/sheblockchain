@@ -10,7 +10,7 @@ const services = [
 
 export function Footer() {
   return (
-    <footer id="footer" className="mt-10 bg-[#0f6a33] text-white">
+    <footer id="contact" className="mt-10 bg-[#0f6a33] text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="space-y-5">

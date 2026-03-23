@@ -11,7 +11,7 @@ type PartnersSectionProps = {
 
 export function PartnersSection({ partners }: PartnersSectionProps) {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <section id="partners" className="mx-auto max-w-7xl scroll-mt-32 px-4 py-8 sm:px-6 lg:px-8">
       <div className="overflow-hidden rounded-[28px] border-2 border-[#5eba46] bg-white shadow-[0_16px_50px_rgba(36,82,47,0.08)]">
         <div className="bg-[#0f6a33] px-6 py-4 text-center text-2xl font-black uppercase tracking-wide text-white">
           Partners

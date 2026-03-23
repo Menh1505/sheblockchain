@@ -8,6 +8,7 @@ import { Hero } from "./hero";
 import { MilestonesSection } from "./milestones-section";
 import { MissionVisionSection } from "./mission-vision-section";
 import { PartnersSection } from "./partners-section";
+import { TeamSection } from "./team";
 
 export function LandingPage() {
   return (
@@ -19,6 +20,7 @@ export function LandingPage() {
       <ActivitiesSection activities={activities} />
       <CompetitiveAdvantagesSection advantages={advantages} />
       <PartnersSection partners={partners} />
+      <TeamSection />
       <MilestonesSection />
       <Footer />
     </div>

@@ -11,7 +11,7 @@ type ActivitiesSectionProps = {
 
 export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <section id="activities" className="mx-auto max-w-7xl scroll-mt-32 px-4 py-8 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2 className="text-3xl font-black uppercase text-[#116b35] sm:text-4xl">Our Activities</h2>
       </div>

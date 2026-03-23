@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CompanyOverviewSection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <section id="services" className="mx-auto max-w-7xl scroll-mt-32 px-4 py-6 sm:px-6 lg:px-8">
       <div className="overflow-hidden rounded-[28px] border-2 border-[#5eba46] bg-white p-3 shadow-[0_16px_50px_rgba(36,82,47,0.08)] sm:p-4">
         <Image
           src="/product&service.svg"
