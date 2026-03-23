@@ -49,33 +49,6 @@ export const activities = [
     title: "Unitour Program",
     image: "/act/act3.svg",
   },
-  {
-    title: "",
-    image: "/act/act4.svg",
-  },
-  {
-    title: "",
-    image: "/act/act5.svg",
-  },
-  {
-    title: "",
-    image: "/act/act6.svg",
-  },
-] as const;
-
-export const advantages = [
-  {
-    name: "Outstanding Expertise",
-    image: "/ca/ca1.svg",
-  },
-  {
-    name: "Intensive Network",
-    image: "/ca/ca2.svg",
-  },
-  {
-    name: "Professional & Dedicate",
-    image: "/ca/ca3.svg",
-  },
 ] as const;
 
 export const partners = [

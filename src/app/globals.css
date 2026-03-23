@@ -46,3 +46,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #106b34 #e8f3df;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e8f3df;
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #106b34;
+  border-radius: 999px;
+  border: 2px solid #e8f3df;
+}

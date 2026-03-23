@@ -37,24 +37,12 @@ const teamMembers = [
     role: "Founder of S.H.E Blockchain",
     description: "5 years of experience in Blockchain & Crypto.",
   },
-  {
-    imageSrc: "/team/cris.jpg",
-    name: "cris",
-    role: "Education Coordinator",
-    description: "Supporting curriculum planning and learner experience to make Web3 education more accessible.",
-  },
-  {
-    imageSrc: "/team/jasontran.jpg",
-    name: "jason",
-    role: "Business Development",
-    description: "Driving collaboration opportunities and turning new connections into scalable growth initiatives.",
-  },
 ] as const;
 
 export function TeamSection() {
   return (
-    <section id="team" className="w-full scroll-mt-32 px-10 py-8 sm:px-6 lg:px-8">
-      <div className="mb-8 text-center">
+    <section id="team" className="w-full scroll-mt-32 px-10 py-8 sm:px-6 lg:px-8 sm:mt-8 md:mt-14 lg:mt-26">
+      <div className="mb-10 text-center">
         <h2 className="text-xl mb-2 font-black uppercase text-[#0f8a38] sm:text-2xl">Our Team</h2>
         <h2 className="relative inline-block text-4xl font-black uppercase text-[#116b35] sm:text-5xl">
           Speak With One of Our Experts
@@ -62,7 +50,7 @@ export function TeamSection() {
         </h2>
       </div>
 
-      <div className="-mx-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+      <div className="-mx-4 overflow-x-auto custom-scrollbar px-4 pb-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
         <div className="flex min-w-max gap-6">
           {teamMembers.map((member, index) => (
             <ProfileCard
