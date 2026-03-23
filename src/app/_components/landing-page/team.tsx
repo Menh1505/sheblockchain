@@ -55,8 +55,11 @@ export function TeamSection() {
   return (
     <section id="team" className="w-full scroll-mt-32 px-10 py-8 sm:px-6 lg:px-8">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl mb-2 font-black uppercase text-[#116b35] sm:text-4xl">Our Team</h2>
-        <h2 className="text-4xl font-black uppercase text-[#000000] sm:text-5xl">Speak With One of Our Experts</h2>
+        <h2 className="text-xl mb-2 font-black uppercase text-[#0f8a38] sm:text-2xl">Our Team</h2>
+        <h2 className="relative inline-block text-4xl font-black uppercase text-[#116b35] sm:text-5xl">
+          Speak With One of Our Experts
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#116b35]" />
+        </h2>
       </div>
 
       <div className="-mx-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">

@@ -131,10 +131,13 @@ export function CompanyOverviewSection({ services }: CompanyOverviewSectionProps
   const variants: CardVariant[] = ["light", "green", "dark", "mixed"];
 
   return (
-    <section id="services" className="mx-auto scroll-mt-32 px-8 py-8 sm:px-10 lg:px-16">
-      <div className="mb-8 text-center">
-        <p className="text-sm font-black uppercase tracking-[0.2em] text-[#0f8a38]">What We Offer</p>
-        <h2 className="mt-3 text-4xl font-black uppercase text-[#106b34] sm:text-5xl">Products and Services</h2>
+    <section id="services" className="mx-auto scroll-mt-32 px-8 py-8 sm:px-10 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
+      <div className="mb-10 text-center">
+        <p className="text-xl font-black uppercase tracking-[0.2em] text-[#0f8a38]">What We Offer</p>
+        <h2 className="relative inline-block text-4xl font-black uppercase text-[#116b35] sm:text-5xl">
+          Products and Services
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#116b35]" />
+        </h2>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">

@@ -1,4 +1,7 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import { PromoSplitCard } from "../promo-split-card";
 
 type Activity = {
   title: string;
@@ -9,52 +12,119 @@ type ActivitiesSectionProps = {
   activities: readonly Activity[];
 };
 
+function ArrowRightIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+    </svg>
+  );
+}
+
+function ArrowLeftIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+    </svg>
+  );
+}
+
 export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
-  const columns = [
+  const slides = [
     {
       title: "Blockchain training course",
-      items: [activities[0], activities[3]].filter(Boolean),
+      description:
+        "Boost your tech savvy with Blockchain essentials! Hanoi Foreign Trade University students joined the TICK THE TECH BOX short-term program on Blockchain, co-hosted by S.H.E Blockchain. Exploring the core concepts and applications of Blockchain technology from industry experts and gain hands-on experience.",
+      imageSrc: activities[0]?.image ?? "/act/act1.svg",
+      imageAlt: "Blockchain training course",
+      reverse: false,
     },
     {
       title: "Industrial Experience Program",
-      items: [activities[1], activities[4]].filter(Boolean),
+      description:
+        "Van Lang University and SMU Singapore, a top Asian university, joined the INDUSTRIAL EXPERIENCE PROGRAM co-organized by S.H.E Blockchain.",
+      imageSrc: activities[1]?.image ?? "/act/act2.svg",
+      imageAlt: "Industrial Experience Program",
+      reverse: true,
     },
     {
       title: "Unitour Program",
-      items: [activities[2], activities[5]].filter(Boolean),
+      description:
+        "Connect, learn, and innovate: Discover the power of Blockchain at VinUniversity's knowledge exchange event which co-hosted by S.H.E Blockchain.",
+      imageSrc: activities[2]?.image ?? "/act/act3.svg",
+      imageAlt: "Unitour Program",
+      reverse: false,
     },
   ] as const;
 
-  return (
-    <section id="activities" className="mx-auto scroll-mt-32 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <h2 className="text-4xl font-black uppercase text-[#116b35] sm:text-5xl">Our Activities</h2>
-      </div>
-      <div className="mt-8 grid gap-6 lg:grid-cols-3">
-        {columns.map((column) => (
-          <div key={column.title} className="flex flex-col gap-5">
-            <div className="rounded-3xl border border-[#d9ebce] bg-[#eef6e7] px-4 py-4 text-center text-xl font-bold text-[#24523f] shadow-[0_10px_30px_rgba(36,82,47,0.06)]">
-              {column.title}
-            </div>
+  const [activeIndex, setActiveIndex] = useState(0);
 
-            {column.items.map((activity, index) => (
-              <div
-                key={`${column.title}-${index}`}
-                className="group overflow-hidden rounded-3xl border border-[#d9ebce] bg-white shadow-[0_14px_40px_rgba(36,82,47,0.08)]"
-              >
-                <div className="relative h-84 overflow-hidden">
-                  <Image
-                    src={activity.image}
-                    alt={column.title}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, 100vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        ))}
+  const handlePrevious = () => {
+    setActiveIndex((current) => (current === 0 ? slides.length - 1 : current - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((current) => (current === slides.length - 1 ? 0 : current + 1));
+  };
+
+  return (
+    <section id="activities" className="mx-auto scroll-mt-32 px-6 py-8 sm:px-8 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
+      <div className="text-center mb-10">
+        <h2 className="relative inline-block text-4xl font-black uppercase text-[#116b35] sm:text-5xl">
+          Our Activities
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#116b35]" />
+        </h2>
+      </div>
+
+      <div className="mt-8 overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {slides.map((slide) => (
+            <div key={slide.title} className="w-full shrink-0">
+              <PromoSplitCard
+                title={slide.title}
+                description={slide.description}
+                imageSrc={slide.imageSrc}
+                imageAlt={slide.imageAlt}
+                reverse={slide.reverse}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-8 flex items-center justify-center gap-4">
+        <button
+          type="button"
+          aria-label="Previous activity"
+          onClick={handlePrevious}
+          className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-black bg-white text-[#106b34] shadow-[4px_4px_0_#000] transition hover:-translate-y-0.5"
+        >
+          <ArrowLeftIcon />
+        </button>
+
+        <div className="flex items-center gap-2">
+          {slides.map((slide, index) => (
+            <button
+              key={slide.title}
+              type="button"
+              aria-label={`Go to ${slide.title}`}
+              onClick={() => setActiveIndex(index)}
+              className={`h-3 rounded-full transition-all ${activeIndex === index ? "w-10 bg-[#106b34]" : "w-3 bg-[#b7d7b0]"
+                }`}
+            />
+          ))}
+        </div>
+
+        <button
+          type="button"
+          aria-label="Next activity"
+          onClick={handleNext}
+          className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-black bg-white text-[#106b34] shadow-[4px_4px_0_#000] transition hover:-translate-y-0.5"
+        >
+          <ArrowRightIcon />
+        </button>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function MissionVisionSection() {
   return (
-    <section id="mission" className="mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-8">
+    <section id="mission" className="mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-16">
       <div className="rounded-4xl border border-[#dbeacf] bg-[#e8f3df] p-5 shadow-[0_20px_80px_rgba(44,88,54,0.08)] sm:p-6 lg:p-8">
         <p className="mx-auto max-w-5xl text-center text-base leading-8 text-[#456553] sm:text-lg">
           For <span className="font-bold text-[#2b6a38]">individuals</span> and{" "}

@@ -14,15 +14,12 @@ export function PartnersSection({ partners }: PartnersSectionProps) {
   const marqueePartners = [...partners, ...partners];
 
   return (
-    <section id="partners" className="mx-auto scroll-mt-32 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="overflow-hidden rounded-[28px] border-2 border-[#5eba46] bg-white shadow-[0_16px_50px_rgba(36,82,47,0.08)]">
-        <div className="bg-[#0f6a33] px-6 py-4 text-center text-4xl font-black uppercase tracking-wide text-[#ccffe0]">
-          Partners
-        </div>
+    <section id="partners" className="mx-auto scroll-mt-32 mb-4 px-4 py-8 sm:px-6 lg:px-8">
+      <div className="overflow-hidden">
 
         <div className="relative overflow-hidden rounded-3xl">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-[#fafdf8] to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-[#fafdf8] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-40 bg-linear-to-r from-[#fafdf8] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-40 bg-linear-to-l from-[#fafdf8] to-transparent" />
 
           <div className="partners-marquee flex w-max gap-8">
             {marqueePartners.map((partner, index) => (

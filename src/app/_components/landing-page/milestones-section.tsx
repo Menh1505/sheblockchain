@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function MilestonesSection() {
   return (
-    <section className="mx-auto px-4 py-8 sm:px-6 lg:px-8 lg:pb-16">
+    <section className="mx-auto px-4 py-8 sm:px-6 lg:px-8 lg:pb-16 sm:mt-8 md:mt-14 lg:mt-26">
       <div className="overflow-hidden rounded-[28px] bg-white p-3 shadow-[0_16px_50px_rgba(36,82,47,0.08)] sm:p-4">
         <Image
           src="/milestone.svg"

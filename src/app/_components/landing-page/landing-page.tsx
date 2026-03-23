@@ -15,11 +15,11 @@ export function LandingPage() {
     <div className="min-h-screen bg-[#f6faf4] text-[#1b3f2f]">
       <Header />
       <Hero highlights={highlights} />
+      <PartnersSection partners={partners} />
       <MissionVisionSection />
       <CompanyOverviewSection services={services} />
       <ActivitiesSection activities={activities} />
       <CompetitiveAdvantagesSection advantages={advantages} />
-      <PartnersSection partners={partners} />
       <TeamSection />
       <MilestonesSection />
       <Footer />
