@@ -33,7 +33,7 @@ const socialLinks = [
 export function Hero({ highlights }: HeroProps) {
   return (
     <section className="relative overflow-hidden scroll-mt-32 px-4 pb-4 pt-6 sm:px-6 lg:px-8 lg:pb-10">
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 opacity-10" />
+      <div className="absolute inset-0" />
       <div className="absolute inset-0" />
       <div className="relative">
         <div className="grid h-full overflow-hidden rounded-[38px] border border-gray-700 bg-gray-800 lg:min-h-180 lg:grid-cols-[88px_minmax(0,1fr)_minmax(420px,0.92fr)]">

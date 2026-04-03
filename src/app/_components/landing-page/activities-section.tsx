@@ -67,7 +67,7 @@ export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
   };
 
   return (
-    <section className="bg-gray-900 mx-auto scroll-mt-32 px-6 py-8 sm:px-8 lg:px-16">
+    <section className="mx-auto scroll-mt-32 px-6 py-8 sm:px-8 lg:px-16">
       <div className="text-center mb-10">
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Our Activities
