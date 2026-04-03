@@ -15,12 +15,22 @@ const navItems = [
   { label: "Milestones", href: "#milestones" },
 ] as const;
 
-export function Header() {
+type HeaderProps = {
+  isHeroActive: boolean;
+};
+
+export function Header({ isHeroActive }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header id="header" className="fixed inset-x-0 top-0 z-50 w-full px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full rounded-4xl border border-gray-700 bg-gray-800/90 shadow-[0_14px_40px_rgba(16,63,47,0.10)] backdrop-blur">
+      <div
+        className={`mx-auto w-full rounded-4xl transition-all duration-300 ${
+          isHeroActive
+            ? "border border-gray-700 bg-gray-800/90 shadow-[0_14px_40px_rgba(16,63,47,0.10)] backdrop-blur"
+            : "border border-transparent bg-transparent shadow-none backdrop-blur-0"
+        }`}
+      >
         <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
           <Link href="#home" className="shrink-0">
             <Image
@@ -76,7 +86,7 @@ export function Header() {
         </div>
 
         {isMenuOpen ? (
-          <div className="border-t border-gray-700 px-5 py-5 lg:hidden">
+          <div className={`px-5 py-5 lg:hidden ${isHeroActive ? "border-t border-gray-700" : "border-t border-white/10 bg-gray-900/95 backdrop-blur"}`}>
             <nav className="flex flex-col gap-3">
               {navItems.map((item) => (
                 <a

@@ -1,4 +1,9 @@
 declare module "fullpage.js" {
+  export type FullPageSectionInfo = {
+    anchor?: string;
+    index?: number;
+  };
+
   export type FullPageOptions = {
     licenseKey?: string;
     autoScrolling?: boolean;
@@ -13,8 +18,21 @@ declare module "fullpage.js" {
     sectionsColor?: string[];
     anchors?: string[];
     menu?: string;
+    fixedElements?: string;
     responsiveWidth?: number;
     responsiveHeight?: number;
+    afterLoad?: (
+      origin: FullPageSectionInfo | null,
+      destination: FullPageSectionInfo,
+      direction: string,
+      trigger?: string,
+    ) => void;
+    onLeave?: (
+      origin: FullPageSectionInfo,
+      destination: FullPageSectionInfo,
+      direction: string,
+      trigger?: string,
+    ) => void;
   };
 
   export type FullPageInstance = {

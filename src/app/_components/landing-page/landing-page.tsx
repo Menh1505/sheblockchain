@@ -11,7 +11,7 @@ import { MilestonesSection } from "./milestones-section";
 import { MissionVisionSection } from "./mission-vision-section";
 import { PartnersSection } from "./partners-section";
 import { TeamSection } from "./team";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const sectionAnchors = [
   "home",
@@ -26,6 +26,8 @@ const sectionAnchors = [
 ] as const;
 
 export function LandingPage() {
+  const [isHeroActive, setIsHeroActive] = useState(true);
+
   useEffect(() => {
     let resizeObserver: ResizeObserver | null = null;
     let isMounted = true;
@@ -74,6 +76,12 @@ export function LandingPage() {
           fixedElements: "#header",
           responsiveWidth: 768,
           responsiveHeight: 600,
+          afterLoad: (_origin, destination) => {
+            setIsHeroActive(destination.anchor === "home");
+          },
+          onLeave: (_origin, destination) => {
+            setIsHeroActive(destination.anchor === "home");
+          },
         });
       });
     }
@@ -91,7 +99,7 @@ export function LandingPage() {
 
   return (
     <div className="relative min-h-screen bg-gray-900 text-white">
-      <Header />
+      <Header isHeroActive={isHeroActive} />
       <div id="fullpage">
         <div className="section pt-[var(--landing-header-offset,96px)]" data-menuanchor="home">
           <Hero highlights={highlights} />
