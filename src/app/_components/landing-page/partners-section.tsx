@@ -14,7 +14,7 @@ export function PartnersSection({ partners }: PartnersSectionProps) {
   const marqueePartners = [...partners, ...partners];
 
   return (
-    <section id="partners" className="mx-auto scroll-mt-32 mb-4 px-4 py-8 sm:px-6 lg:px-8">
+    <section className="mx-auto scroll-mt-32 px-4 py-6 sm:px-6 lg:px-8">
       <div className="overflow-hidden">
 
         <div className="relative overflow-hidden rounded-3xl">

@@ -51,7 +51,7 @@ const advantages = [
 
 export function CompetitiveAdvantagesSection() {
   return (
-    <section id="advantages" className="bg-gray-900 mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
+    <section className="bg-gray-900 mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-16">
       <div className="mb-10 text-center">
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Competitive Advantages

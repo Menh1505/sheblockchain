@@ -47,7 +47,7 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section id="team" className="bg-gray-900 w-full scroll-mt-32 px-10 py-8 sm:px-6 lg:px-8 sm:mt-8 md:mt-14 lg:mt-26">
+    <section className="bg-gray-900 w-full scroll-mt-32 px-10 py-6 sm:px-6 lg:px-8">
       <div className="mb-10 text-center">
         <h2 className="text-xl mb-2 font-black uppercase text-cyan-400 sm:text-2xl">Our Team</h2>
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">

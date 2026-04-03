@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function MilestonesSection() {
   return (
-    <section className="bg-gray-900 mx-auto px-6 py-8 sm:px-8 lg:px-16 lg:pb-16 sm:mt-8 md:mt-14 lg:mt-26">
+    <section className="bg-gray-900 mx-auto px-6 py-8 sm:px-8 lg:px-16 lg:pb-16">
       <div className="mb-8 text-center">
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Memorable Milestones

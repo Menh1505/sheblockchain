@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function MissionVisionSection() {
   return (
-    <section id="mission" className="mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-16">
+    <section className="mx-auto scroll-mt-32 px-4  sm:px-6 lg:px-16">
       <div className="rounded-4xl border border-gray-700 bg-gray-800 p-5 shadow-[0_20px_80px_rgba(139,92,246,0.08)] sm:p-6 lg:p-8">
         <p className="mx-auto max-w-5xl text-center text-base leading-8 text-gray-300 sm:text-lg">
           For <span className="font-bold text-cyan-400">individuals</span> and{" "}
@@ -15,7 +15,7 @@ export function MissionVisionSection() {
           <span className="font-bold text-cyan-400">our industry-leading Web3 network</span>.
         </p>
 
-        <div className="mt-8 space-y-8">
+        <div className="space-y-8">
           <article className="grid items-stretch gap-6 lg:grid-cols-2 lg:gap-10">
             <div className="relative min-h-80 overflow-hidden rounded-[28px] border border-gray-600 bg-gray-700 shadow-[0_16px_40px_rgba(139,92,246,0.08)]">
               <Image
