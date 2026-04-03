@@ -103,7 +103,7 @@ export function LandingPage() {
           slidesNavigation: true,
           slidesNavPosition: "bottom",
           controlArrows: true,
-          verticalCentered: true,
+          verticalCentered: false,
           sectionsColor: Array(sectionAnchors.length).fill("transparent"),
           anchors: [...sectionAnchors],
           menu: "#menu",
@@ -167,28 +167,44 @@ export function LandingPage() {
           <Hero highlights={highlights} />
         </div>
         <div className="section" data-menuanchor="partners">
-          <PartnersSection partners={partners} />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
+            <PartnersSection partners={partners} />
+          </div>
         </div>
         <div className="section" data-menuanchor="mission">
-          <MissionVisionSection />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-start justify-center overflow-y-auto">
+            <MissionVisionSection />
+          </div>
         </div>
         <div className="section" data-menuanchor="services">
-          <CompanyOverviewSection services={services} />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-start justify-center overflow-y-auto">
+            <CompanyOverviewSection services={services} />
+          </div>
         </div>
         <div className="section" data-menuanchor="activities">
-          <ActivitiesSection activities={activities} />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
+            <ActivitiesSection activities={activities} />
+          </div>
         </div>
         <div className="section" data-menuanchor="advantages">
-          <CompetitiveAdvantagesSection />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
+            <CompetitiveAdvantagesSection />
+          </div>
         </div>
         <div className="section" data-menuanchor="team">
-          <TeamSection />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
+            <TeamSection />
+          </div>
         </div>
         <div className="section" data-menuanchor="milestones">
-          <MilestonesSection />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
+            <MilestonesSection />
+          </div>
         </div>
         <div className="section" data-menuanchor="contact">
-          <Footer />
+          <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

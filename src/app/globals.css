@@ -60,6 +60,22 @@ body {
   color: #ededed;
 }
 
+/* ── fullpage.js side navigation ── */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #ffffff !important;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+  background: #00ff88 !important;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.7) !important;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: #ffffff !important;
+}
+
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #00ff88 #0d1a12;

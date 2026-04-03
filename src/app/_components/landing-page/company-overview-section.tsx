@@ -33,8 +33,8 @@ const cardVariants: Record<
   green: {
     cardClassName: "bg-[#00c853] border-gray-700 shadow-[0_14px_0_#00ff88] text-white",
     titleClassName: "bg-gray-900 text-white",
-    textClassName: "text-gray-200",
-    ctaClassName: "text-white",
+    textClassName: "text-black",
+    ctaClassName: "text-black",
     iconWrapClassName: "bg-[#00c853]",
     iconClassName: "text-white",
   },
@@ -83,29 +83,29 @@ function ServiceCard({
       : [service.title];
 
   return (
-    <article className={`rounded-[30px] border p-6 sm:p-7 lg:p-8 ${styles.cardClassName}`}>
-      <div className="flex h-full min-h-72.5 flex-col justify-between gap-8 lg:flex-row lg:items-center">
+    <article className={`rounded-3xl border p-4 sm:p-5 h-full ${styles.cardClassName}`}>
+      <div className="flex h-full flex-col justify-between gap-3 lg:flex-row lg:items-center">
         <div className="flex max-w-90 flex-1 flex-col justify-between">
           <div>
             <div className="space-y-2">
               {titleLines.map((line) => (
                 <span
                   key={line}
-                  className={`inline-block w-fit rounded-2xl px-4 py-2 text-2xl font-black uppercase leading-none sm:text-3xl ${styles.titleClassName}`}
+                  className={`inline-block w-fit rounded-xl px-3 py-1.5 text-xl font-black uppercase leading-none sm:text-2xl ${styles.titleClassName}`}
                 >
                   {line}
                 </span>
               ))}
             </div>
-            <p className={`mt-5 text-sm leading-7 sm:text-base ${styles.textClassName}`}>{service.description}</p>
+            <p className={`mt-3 text-sm leading-6 sm:text-base ${styles.textClassName}`}>{service.description}</p>
           </div>
 
           <a
             href="#contact"
-            className={`mt-6 inline-flex items-center gap-3 text-sm font-black uppercase tracking-[0.14em] ${styles.ctaClassName}`}
+            className={`mt-4 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.14em] ${styles.ctaClassName}`}
           >
             <span
-              className={`inline-flex h-11 w-11 items-center justify-center rounded-full border border-black ${styles.iconWrapClassName}`}
+              className={`inline-flex h-9 w-9 items-center justify-center rounded-full border border-black ${styles.iconWrapClassName}`}
             >
               <ArrowUpRightIcon className={`h-4 w-4 ${styles.iconClassName}`} />
             </span>
@@ -113,13 +113,13 @@ function ServiceCard({
           </a>
         </div>
 
-        <div className="flex flex-1 justify-end">
+        <div className="flex flex-1 items-center justify-center lg:justify-end">
           <Image
             src={illustrationSrc}
             alt={service.title}
-            width={220}
-            height={180}
-            className="h-auto w-full max-w-45 object-contain"
+            width={200}
+            height={160}
+            className="h-auto w-full max-w-[160px] lg:max-w-[200px] object-contain"
           />
         </div>
       </div>
@@ -128,19 +128,24 @@ function ServiceCard({
 }
 
 export function CompanyOverviewSection({ services }: CompanyOverviewSectionProps) {
-  const variants: CardVariant[] = ["light", "green", "dark", "mixed"];
+  const variants: CardVariant[] = ["green", "light", "dark", "mixed"];
 
   return (
-    <section className="mx-auto scroll-mt-32 px-8 py-8 sm:px-10 lg:px-16">
-      <div className="mb-10 text-center">
-        <p className="text-xl font-black uppercase tracking-[0.2em] text-[#00ff88]">What We Offer</p>
-        <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
+    <section className="mx-auto w-full px-6 py-3 sm:px-8 lg:px-16">
+      {/* header row */}
+      <div className="mb-4 text-center shrink-0">
+        <p className="text-base font-black uppercase tracking-[0.2em] text-[#00ff88]">What We Offer</p>
+        <h2 className="relative inline-block text-3xl font-black uppercase text-white sm:text-4xl">
           Products and Services
           <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#00ff88]" />
         </h2>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      {/* grid fills remaining viewport height */}
+      <div
+        className="grid gap-3 lg:grid-cols-2"
+        style={{ height: "calc(100vh - var(--landing-header-offset, 96px) - 8rem)" }}
+      >
         {services.map((service, index) => (
           <ServiceCard
             key={service.title}

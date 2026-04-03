@@ -128,7 +128,7 @@ export function Hero({ highlights }: HeroProps) {
             <div className="absolute inset-x-10 top-0 h-24 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.8),transparent_68%)] blur-2xl" />
             <div className="relative flex h-full w-full overflow-hidden rounded-[30px] border-2 border-white bg-gray-800">
               <Image
-                src="/entrepreneur.jpg"
+                src="/hero/entrepreneur.jpg"
                 alt="S.H.E Blockchain team"
                 fill
                 priority
