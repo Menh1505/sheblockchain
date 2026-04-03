@@ -97,13 +97,6 @@ export function Header({ isHeroActive }: HeaderProps) {
                   {item.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="mt-2 inline-flex justify-center rounded-full border-2 border-[#00ff88] bg-[#00c853] px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#00ff88]"
-              >
-                Get Started
-              </a>
             </nav>
           </div>
         ) : null}
