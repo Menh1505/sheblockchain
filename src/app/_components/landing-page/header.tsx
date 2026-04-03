@@ -55,13 +55,6 @@ export function Header({ isHeroActive }: HeaderProps) {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href="#contact"
-              className="hidden rounded-full border-2 border-[#00ff88] bg-[#00c853] px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#00ff88] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#00ff88] sm:inline-flex"
-            >
-              Get Started
-            </a>
-
             <button
               type="button"
               aria-label="Toggle menu"
