@@ -25,10 +25,10 @@ export function ProfileCard({
 
   return (
     <article
-      className={`flex w-full max-w-85 flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white shadow-[10px_10px_0_#000] ${className}`}
+      className={`flex w-full max-w-85 flex-col overflow-hidden rounded-[28px] border-2 border-white bg-gray-800 shadow-[10px_10px_0_#8b5cf6] ${className}`}
       style={{ height: `${cardHeight}px` }}
     >
-      <div className="relative shrink-0 border-b-2 border-black bg-[#f3f7ef]" style={{ height: `${imageHeight}px` }}>
+      <div className="relative shrink-0 border-b-2 border-white bg-gray-700" style={{ height: `${imageHeight}px` }}>
         <Image
           src={imageSrc}
           alt={alt ?? name}
@@ -41,9 +41,9 @@ export function ProfileCard({
 
       <div className="flex min-h-0 flex-1 flex-col justify-between gap-3 p-5">
         <div>
-          <h3 className="text-2xl font-black uppercase leading-tight text-black">{name}</h3>
-          <p className="mt-2 mb-3 text-sm font-extrabold uppercase tracking-[0.16em] text-[#106b34]">{role}</p>
-          <p className="overflow-y-auto text-sm leading-6 text-[#2d2d2d]">{description}</p>
+          <h3 className="text-2xl font-black uppercase leading-tight text-white">{name}</h3>
+          <p className="mt-2 mb-3 text-sm font-extrabold uppercase tracking-[0.16em] text-purple-400">{role}</p>
+          <p className="overflow-y-auto text-sm leading-6 text-gray-300">{description}</p>
         </div>
       </div>
     </article>

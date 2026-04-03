@@ -11,11 +11,11 @@ const services = [
 export function Footer() {
   return (
     <footer id="contact" className="px-4 md:px-8 lg:px-12 sm:mt-8 md:mt-14 lg:mt-26">
-      <div className="mx-auto rounded-t-4xl bg-[#191A23] px-6 py-10 text-white md:px-10 md:py-12 lg:px-15 lg:py-13.75">
+      <div className="mx-auto rounded-t-4xl bg-gray-900 px-6 py-10 text-white md:px-10 md:py-12 lg:px-15 lg:py-13.75">
         <div className="flex flex-col gap-10">
           <div className="grid gap-10 lg:grid-cols-4">
             <div className="space-y-5 lg:col-span-2">
-              <div className="inline-flex items-center rounded-[28px] bg-white px-8 py-3 shadow-lg shadow-black/10">
+              <div className="inline-flex items-center rounded-[28px] bg-gray-800 px-8 py-3 shadow-lg shadow-black/10">
                 <Image
                   src="/she-logo.png"
                   alt="S.H.E Blockchain"
@@ -24,7 +24,7 @@ export function Footer() {
                   className="h-auto w-35 sm:w-45"
                 />
               </div>
-              <p className="max-w-md text-sm leading-7 text-white/85 sm:text-base">
+              <p className="max-w-md text-sm leading-7 text-gray-300 sm:text-base">
                 Our mission is to educate, nurture, and guide the next generation of young talent. Through training
                 programs, skill development, startup incubation, and career orientation, we equip young people with
                 the knowledge, capabilities, and mindset needed to thrive in rapidly emerging technologies, especially
@@ -34,12 +34,12 @@ export function Footer() {
 
             <div className="space-y-5 lg:col-span-1">
               <h5 className="text-xl font-extrabold uppercase tracking-[0.12em] text-white">Contact Information</h5>
-              <div className="h-1 w-20 rounded-full bg-[#8ed15f]" />
-              <div className="space-y-4 text-sm leading-7 text-white/85 sm:text-base">
+              <div className="h-1 w-20 rounded-full bg-purple-500" />
+              <div className="space-y-4 text-sm leading-7 text-gray-300 sm:text-base">
                 <p>Address: Huong Duong 03 Huynh Van Nghe, Phuc Dong Ward, Long Bien District, Hanoi</p>
                 <p>
                   Phone:{" "}
-                  <a href="tel:+84936368600" className="font-semibold text-white transition hover:text-[#c9f39f]">
+                  <a href="tel:+84936368600" className="font-semibold text-white transition hover:text-purple-300">
                     +84 936 368 600
                   </a>
                 </p>
@@ -47,7 +47,7 @@ export function Footer() {
                   Email:{" "}
                   <a
                     href="mailto:contact@she-blockchain-e9e089.ingress-baronn.ewp.live"
-                    className="break-all font-semibold text-white transition hover:text-[#c9f39f]"
+                    className="break-all font-semibold text-white transition hover:text-purple-300"
                   >
                     contact@she-blockchain-e9e089.ingress-baronn.ewp.live
                   </a>
@@ -56,7 +56,7 @@ export function Footer() {
                   Telegram:{" "}
                   <a
                     href="https://t.me/sheblockchain"
-                    className="break-all font-semibold text-white transition hover:text-[#c9f39f]"
+                    className="break-all font-semibold text-white transition hover:text-purple-300"
                   >
                     S.H.E Blockchain group
                   </a>
@@ -66,11 +66,11 @@ export function Footer() {
 
             <div className="space-y-5 lg:col-span-1">
               <h5 className="text-xl font-extrabold uppercase tracking-[0.12em] text-white">Services</h5>
-              <div className="h-1 w-20 rounded-full bg-[#8ed15f]" />
+              <div className="h-1 w-20 rounded-full bg-purple-500" />
               <ul className="space-y-3 text-sm text-white/85 sm:text-base">
                 {services.map((service) => (
                   <li key={service} className="flex items-center gap-3">
-                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#8ed15f]" />
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-purple-500" />
                     <span>{service}</span>
                   </li>
                 ))}

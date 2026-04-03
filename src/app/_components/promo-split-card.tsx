@@ -30,11 +30,11 @@ export function PromoSplitCard({
           ].join(" ")}
         >
           <div>
-            <h2 className="text-2xl font-extrabold leading-[1.2] text-[#191A23] sm:text-4xl lg:text-6xl">
+            <h2 className="text-2xl font-extrabold leading-[1.2] text-white sm:text-4xl lg:text-6xl">
               {title}
             </h2>
 
-            <p className="mt-5 text-[16px] leading-[1.6] text-[#191A23] sm:text-2xl">
+            <p className="mt-5 text-[16px] leading-[1.6] text-gray-300 sm:text-2xl">
               {description}
             </p>
           </div>
@@ -53,7 +53,7 @@ export function PromoSplitCard({
                   />
                 </div>
               ) : (
-                <div className="flex aspect-494/394 w-full items-center justify-center rounded-3xl border border-dashed border-[#191A23]/30 text-[#191A23]/50">
+                <div className="flex aspect-494/394 w-full items-center justify-center rounded-3xl border border-dashed border-gray-600 text-gray-500">
                   Add image or visual
                 </div>
               )}

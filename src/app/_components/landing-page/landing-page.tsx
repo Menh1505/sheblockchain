@@ -12,7 +12,7 @@ import { TeamSection } from "./team";
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#f6faf4] text-[#1b3f2f]">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero highlights={highlights} />
       <PartnersSection partners={partners} />

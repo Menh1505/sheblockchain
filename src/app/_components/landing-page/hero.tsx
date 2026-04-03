@@ -35,8 +35,8 @@ export function Hero({ highlights }: HeroProps) {
     <section id="home" className="relative overflow-hidden scroll-mt-32 px-4 pb-4 pt-6 sm:px-6 lg:px-8 lg:pb-10">
       <div className="absolute inset-0" />
       <div className="relative">
-        <div className="grid h-full overflow-hidden rounded-[38px] border border-[#d8ebcb] bg-[#dff0d0] lg:min-h-180 lg:grid-cols-[88px_minmax(0,1fr)_minmax(420px,0.92fr)]">
-          <div className="hidden h-full border-r border-[#c4deaf] lg:flex lg:flex-col lg:items-center lg:justify-between lg:px-4 lg:py-8">
+        <div className="grid h-full overflow-hidden rounded-[38px] border border-gray-700 bg-gray-800 lg:min-h-180 lg:grid-cols-[88px_minmax(0,1fr)_minmax(420px,0.92fr)]">
+          <div className="hidden h-full border-r border-gray-600 lg:flex lg:flex-col lg:items-center lg:justify-between lg:px-4 lg:py-8">
             <div className="flex flex-col items-center gap-3">
               {socialLinks.map((item) => (
                 <a
@@ -45,7 +45,7 @@ export function Hero({ highlights }: HeroProps) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={item.name}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-black bg-white text-[#106b34] shadow-[4px_4px_0_#000] transition hover:-translate-y-0.5"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-gray-700 text-purple-400 shadow-[4px_4px_0_#8b5cf6] transition hover:-translate-y-0.5"
                 >
                   {item.icon}
                 </a>
@@ -54,7 +54,7 @@ export function Hero({ highlights }: HeroProps) {
 
             <a
               href="#mission"
-              className="text-[11px] font-black uppercase tracking-[0.28em] text-[#24523f] [writing-mode:vertical-rl]"
+              className="text-[11px] font-black uppercase tracking-[0.28em] text-white [writing-mode:vertical-rl]"
             >
               Scroll
             </a>
@@ -63,12 +63,12 @@ export function Hero({ highlights }: HeroProps) {
           <div className="flex h-full">
             <div className="flex w-full flex-col justify-between p-6 sm:p-8 lg:p-10">
               <div>
-                <div className="inline-flex items-center gap-3 rounded-full border border-[#cfe8be] bg-[#eff7e8] px-5 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#106b34]">
-                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#0f8a38]" />
+                <div className="inline-flex items-center gap-3 rounded-full border border-gray-600 bg-gray-700 px-5 py-2 text-xs font-black uppercase tracking-[0.2em] text-purple-400">
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-purple-500" />
                   Welcome to S.H.E Blockchain
                 </div>
 
-                <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] tracking-tight text-[#106b34] sm:text-5xl lg:text-7xl">
+                <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-5xl lg:text-7xl">
                   Services,
                   <br />
                   Human Resources,
@@ -76,7 +76,7 @@ export function Hero({ highlights }: HeroProps) {
                   Education
                 </h1>
 
-                <p className="mt-6 max-w-2xl text-base leading-8 text-[#4f6f5b] sm:text-lg">
+                <p className="mt-6 max-w-2xl text-base leading-8 text-gray-300 sm:text-lg">
                   Established in May 2022, <strong>S.H.E Blockchain has been operating</strong> in training, talent
                   development, and project incubation within emerging technology industries, especially Blockchain.
                 </p>
@@ -84,7 +84,7 @@ export function Hero({ highlights }: HeroProps) {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a
                     href="#mission"
-                    className="inline-flex items-center justify-center rounded-full border-2 border-black bg-[#8ed15f] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-black shadow-[6px_6px_0_#000] transition hover:translate-x-px hover:translate-y-px hover:shadow-[3px_3px_0_#000]"
+                    className="inline-flex items-center justify-center rounded-full border-2 border-white bg-purple-600 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#8b5cf6] transition hover:translate-x-px hover:translate-y-px hover:shadow-[3px_3px_0_#8b5cf6]"
                   >
                     Our Vision &amp; Mission
                   </a>
@@ -92,10 +92,10 @@ export function Hero({ highlights }: HeroProps) {
                     href="https://www.youtube.com/watch?v=PAdBwqza7cE"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-3 rounded-full border border-[#cfe8be] bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#24523f] transition hover:bg-[#eff7e8]"
+                    className="inline-flex items-center justify-center gap-3 rounded-full border border-gray-600 bg-gray-700 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-gray-600"
                   >
                     <span>View Video</span>
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#106b34] text-white">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 text-white">
                       <svg viewBox="0 0 23.1 22.3" className="h-4 w-4 fill-current" aria-hidden="true">
                         <path d="M2.3,5.6c0-2.5,2-4.5,4.4-4.5c0.8,0,1.6,0.2,2.3,0.6l9.6,5.6c2.1,1.2,2.8,4,1.6,6.1c-0.4,0.7-0.9,1.2-1.6,1.6L9,20.5C6.9,21.8,4.2,21,3,18.9c-0.4-0.7-0.6-1.4-0.6-2.2L2.3,5.6z" />
                       </svg>
@@ -108,7 +108,7 @@ export function Hero({ highlights }: HeroProps) {
                 {highlights.map((item) => (
                   <div
                     key={item.name}
-                    className="overflow-hidden rounded-full border border-[#cfe8be] bg-[#e8f3df] p-1 shadow-sm"
+                    className="overflow-hidden rounded-full border border-gray-600 bg-gray-700 p-1 shadow-sm"
                   >
                     <Image
                       src={item.image}
@@ -125,7 +125,7 @@ export function Hero({ highlights }: HeroProps) {
 
           <div className="relative flex h-full p-4 sm:p-5">
             <div className="absolute inset-x-10 top-0 h-24 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.8),transparent_68%)] blur-2xl" />
-            <div className="relative flex h-full w-full overflow-hidden rounded-[30px] border-2 border-black bg-white">
+            <div className="relative flex h-full w-full overflow-hidden rounded-[30px] border-2 border-white bg-gray-800">
               <Image
                 src="/entrepreneur.jpg"
                 alt="S.H.E Blockchain team"

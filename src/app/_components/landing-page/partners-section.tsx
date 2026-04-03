@@ -18,8 +18,8 @@ export function PartnersSection({ partners }: PartnersSectionProps) {
       <div className="overflow-hidden">
 
         <div className="relative overflow-hidden rounded-3xl">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-40 bg-linear-to-r from-[#fafdf8] to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-40 bg-linear-to-l from-[#fafdf8] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-40 bg-linear-to-r from-gray-900 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-40 bg-linear-to-l from-gray-900 to-transparent" />
 
           <div className="partners-marquee flex w-max gap-8">
             {marqueePartners.map((partner, index) => (

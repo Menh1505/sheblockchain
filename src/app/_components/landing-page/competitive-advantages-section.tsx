@@ -51,26 +51,26 @@ const advantages = [
 
 export function CompetitiveAdvantagesSection() {
   return (
-    <section id="advantages" className="mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
+    <section id="advantages" className="bg-gray-900 mx-auto scroll-mt-32 px-4 pb-8 sm:px-6 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
       <div className="mb-10 text-center">
-        <h2 className="relative inline-block text-4xl font-black uppercase text-[#116b35] sm:text-5xl">
+        <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Competitive Advantages
-          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#116b35]" />
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-purple-500" />
         </h2>
       </div>
 
-      <div className="rounded-4xl border border-[#dbeacf] bg-[#191A23] p-6 shadow-[0_20px_80px_rgba(44,88,54,0.08)] sm:p-8 lg:p-10">
+      <div className="rounded-4xl border border-gray-700 bg-gray-900 p-6 shadow-[0_20px_80px_rgba(139,92,246,0.08)] sm:p-8 lg:p-10">
         <div className="grid gap-8 lg:grid-cols-3 lg:gap-0">
           {advantages.map((item, index) => (
             <div
               key={item.title}
-              className={`flex flex-col items-center text-center text-white ${index !== 0 ? "lg:border-l lg:border-white/30" : ""} ${index !== 2 ? "border-b border-white/15 pb-8 lg:border-b-0 lg:pb-0" : ""} ${index !== 0 ? "lg:pl-8" : ""} ${index !== 2 ? "lg:pr-8" : ""}`}
+              className={`flex flex-col items-center text-center text-white ${index !== 0 ? "lg:border-l lg:border-gray-600" : ""} ${index !== 2 ? "border-b border-gray-700 pb-8 lg:border-b-0 lg:pb-0" : ""} ${index !== 0 ? "lg:pl-8" : ""} ${index !== 2 ? "lg:pr-8" : ""}`}
             >
-              <div className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-white/5 text-[#ccffe0]">
+              <div className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-gray-600 bg-gray-800 text-purple-300">
                 {item.icon}
               </div>
-              <h3 className="mt-6 text-2xl font-black uppercase tracking-[0.06em] text-white">{item.title}</h3>
-              <p className="mt-4 max-w-sm text-base leading-8 text-white/80">{item.description}</p>
+              <h3 className="mt-6 text-2xl font-black uppercase tracking-[0.06em] text-white dark:text-white">{item.title}</h3>
+              <p className="mt-4 max-w-sm text-base leading-8 text-gray-300">{item.description}</p>
             </div>
           ))}
         </div>

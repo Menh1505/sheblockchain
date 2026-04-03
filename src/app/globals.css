@@ -38,13 +38,27 @@ html {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #8b5cf6;
+    /* purple for web3 */
+    --secondary: #3b82f6;
+    /* blue */
   }
 }
 
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #8b5cf6;
+  --secondary: #3b82f6;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.dark body {
+  background-color: #0a0a0a;
+  color: #ededed;
 }
 
 .custom-scrollbar {

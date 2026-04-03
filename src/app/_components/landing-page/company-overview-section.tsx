@@ -23,36 +23,36 @@ const cardVariants: Record<
   }
 > = {
   light: {
-    cardClassName: "bg-[#f2f4ee] border-black shadow-[0_14px_0_#000] text-black",
-    titleClassName: "bg-[#8ed15f] text-black",
-    textClassName: "text-[#2f352f]",
-    ctaClassName: "text-black",
-    iconWrapClassName: "bg-black",
-    iconClassName: "text-[#8ed15f]",
+    cardClassName: "bg-gray-800 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
+    titleClassName: "bg-purple-600 text-white",
+    textClassName: "text-gray-300",
+    ctaClassName: "text-white",
+    iconWrapClassName: "bg-purple-600",
+    iconClassName: "text-white",
   },
   green: {
-    cardClassName: "bg-[#8ed15f] border-black shadow-[0_14px_0_#000] text-black",
-    titleClassName: "bg-white text-black",
-    textClassName: "text-[#1f261f]",
-    ctaClassName: "text-black",
-    iconWrapClassName: "bg-black",
+    cardClassName: "bg-purple-600 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
+    titleClassName: "bg-gray-900 text-white",
+    textClassName: "text-gray-300",
+    ctaClassName: "text-white",
+    iconWrapClassName: "bg-purple-600",
     iconClassName: "text-white",
   },
   dark: {
-    cardClassName: "bg-[#15312a] border-black shadow-[0_14px_0_#000] text-white",
-    titleClassName: "bg-white text-[#15312a]",
-    textClassName: "text-white/85",
+    cardClassName: "bg-gray-900 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
+    titleClassName: "bg-gray-800 text-white",
+    textClassName: "text-gray-300",
     ctaClassName: "text-white",
-    iconWrapClassName: "bg-white",
-    iconClassName: "text-black",
+    iconWrapClassName: "bg-purple-600",
+    iconClassName: "text-white",
   },
   mixed: {
-    cardClassName: "bg-[#edf1ea] border-black shadow-[0_14px_0_#000] text-black",
-    titleClassName: "bg-[#8ed15f] text-black",
-    textClassName: "text-[#324236]",
-    ctaClassName: "text-black",
-    iconWrapClassName: "bg-black",
-    iconClassName: "text-[#8ed15f]",
+    cardClassName: "bg-gray-800 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
+    titleClassName: "bg-purple-600 text-white",
+    textClassName: "text-gray-300",
+    ctaClassName: "text-white",
+    iconWrapClassName: "bg-purple-600",
+    iconClassName: "text-white",
   },
 };
 
@@ -131,12 +131,12 @@ export function CompanyOverviewSection({ services }: CompanyOverviewSectionProps
   const variants: CardVariant[] = ["light", "green", "dark", "mixed"];
 
   return (
-    <section id="services" className="mx-auto scroll-mt-32 px-8 py-8 sm:px-10 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
+    <section id="services" className="bg-gray-900 mx-auto scroll-mt-32 px-8 py-8 sm:px-10 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
       <div className="mb-10 text-center">
-        <p className="text-xl font-black uppercase tracking-[0.2em] text-[#0f8a38]">What We Offer</p>
-        <h2 className="relative inline-block text-4xl font-black uppercase text-[#116b35] sm:text-5xl">
+        <p className="text-xl font-black uppercase tracking-[0.2em] text-purple-400">What We Offer</p>
+        <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Products and Services
-          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#116b35]" />
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-purple-500" />
         </h2>
       </div>
 
