@@ -34,12 +34,12 @@ export function Footer() {
 
             <div className="space-y-5 lg:col-span-1">
               <h5 className="text-xl font-extrabold uppercase tracking-[0.12em] text-white">Contact Information</h5>
-              <div className="h-1 w-20 rounded-full bg-cyan-500" />
+              <div className="h-1 w-20 rounded-full bg-[#00ff88]" />
               <div className="space-y-4 text-sm leading-7 text-gray-300 sm:text-base">
                 <p>Address: Huong Duong 03 Huynh Van Nghe, Phuc Dong Ward, Long Bien District, Hanoi</p>
                 <p>
                   Phone:{" "}
-                  <a href="tel:+84936368600" className="font-semibold text-white transition hover:text-cyan-300">
+                  <a href="tel:+84936368600" className="font-semibold text-white transition hover:text-[#00ff88]">
                     +84 936 368 600
                   </a>
                 </p>
@@ -47,7 +47,7 @@ export function Footer() {
                   Email:{" "}
                   <a
                     href="mailto:contact@she-blockchain-e9e089.ingress-baronn.ewp.live"
-                    className="break-all font-semibold text-white transition hover:text-cyan-300"
+                    className="break-all font-semibold text-white transition hover:text-[#00ff88]"
                   >
                     contact@she-blockchain-e9e089.ingress-baronn.ewp.live
                   </a>
@@ -56,7 +56,7 @@ export function Footer() {
                   Telegram:{" "}
                   <a
                     href="https://t.me/sheblockchain"
-                    className="break-all font-semibold text-white transition hover:text-cyan-300"
+                    className="break-all font-semibold text-white transition hover:text-[#00ff88]"
                   >
                     S.H.E Blockchain group
                   </a>
@@ -66,11 +66,11 @@ export function Footer() {
 
             <div className="space-y-5 lg:col-span-1">
               <h5 className="text-xl font-extrabold uppercase tracking-[0.12em] text-white">Services</h5>
-              <div className="h-1 w-20 rounded-full bg-cyan-500" />
+              <div className="h-1 w-20 rounded-full bg-[#00ff88]" />
               <ul className="space-y-3 text-sm text-white/85 sm:text-base">
                 {services.map((service) => (
                   <li key={service} className="flex items-center gap-3">
-                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-cyan-500" />
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#00ff88]" />
                     <span>{service}</span>
                   </li>
                 ))}

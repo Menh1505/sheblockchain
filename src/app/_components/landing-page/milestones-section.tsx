@@ -6,7 +6,7 @@ export function MilestonesSection() {
       <div className="mb-8 text-center">
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Memorable Milestones
-          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-cyan-500" />
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#00ff88]" />
         </h2>
       </div>
       <div className="bg-gray-800 overflow-hidden rounded-[28px] p-3 sm:p-4">

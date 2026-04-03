@@ -55,18 +55,18 @@ export function CompetitiveAdvantagesSection() {
       <div className="mb-10 text-center">
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Competitive Advantages
-          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-cyan-500" />
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-[#00ff88]" />
         </h2>
       </div>
 
-      <div className="rounded-4xl border border-gray-700 bg-gray-900 p-6 shadow-[0_20px_80px_rgba(6,182,212,0.08)] sm:p-8 lg:p-10">
+      <div className="rounded-4xl border border-[#00ff88]/20 bg-gray-900 p-6 shadow-[0_20px_80px_rgba(0,255,136,0.08)] sm:p-8 lg:p-10">
         <div className="grid gap-8 lg:grid-cols-3 lg:gap-0">
           {advantages.map((item, index) => (
             <div
               key={item.title}
               className={`flex flex-col items-center text-center text-white ${index !== 0 ? "lg:border-l lg:border-gray-600" : ""} ${index !== 2 ? "border-b border-gray-700 pb-8 lg:border-b-0 lg:pb-0" : ""} ${index !== 0 ? "lg:pl-8" : ""} ${index !== 2 ? "lg:pr-8" : ""}`}
             >
-              <div className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-gray-600 bg-gray-800 text-cyan-300">
+              <div className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-[#00ff88]/30 bg-gray-800 text-[#00ff88]">
                 {item.icon}
               </div>
               <h3 className="mt-6 text-2xl font-black uppercase tracking-[0.06em] text-white dark:text-white">{item.title}</h3>

@@ -5,14 +5,14 @@ export function MissionVisionSection() {
     <section className="mx-auto scroll-mt-32 px-4  sm:px-6 lg:px-16">
       <div className="rounded-4xl border border-gray-700 bg-gray-800 p-5 shadow-[0_20px_80px_rgba(139,92,246,0.08)] sm:p-6 lg:p-8">
         <p className="mx-auto max-w-5xl text-center text-base leading-8 text-gray-300 sm:text-lg">
-          For <span className="font-bold text-cyan-400">individuals</span> and{" "}
-          <span className="font-bold text-cyan-400">startup projects</span> seeking career opportunities in emerging
-          technology, <span className="font-bold text-cyan-400">S.H.E blockchain</span> is an edtech company that{" "}
-          <span className="font-bold text-cyan-400">empowers young professionals and startups</span> with nurturing
+          For <span className="font-bold text-[#00ff88]">individuals</span> and{" "}
+          <span className="font-bold text-[#00ff88]">startup projects</span> seeking career opportunities in emerging
+          technology, <span className="font-bold text-[#00ff88]">S.H.E blockchain</span> is an edtech company that{" "}
+          <span className="font-bold text-[#00ff88]">empowers young professionals and startups</span> with nurturing
           and incubation initiatives, enabling them to thrive in the fast-evolving Web3 landscape. By{" "}
-          <span className="font-bold text-cyan-400">cutting-edge education and extensive expertise</span>, we are
+          <span className="font-bold text-[#00ff88]">cutting-edge education and extensive expertise</span>, we are
           dedicated to your success by leveraging{" "}
-          <span className="font-bold text-cyan-400">our industry-leading Web3 network</span>.
+          <span className="font-bold text-[#00ff88]">our industry-leading Web3 network</span>.
         </p>
 
         <div className="space-y-8">
@@ -29,7 +29,7 @@ export function MissionVisionSection() {
             </div>
             <div className="flex items-center p-2 sm:p-4 lg:p-6">
               <div>
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-cyan-500">Our Mission</p>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-[#00ff88]">Our Mission</p>
                 <h3 className="mt-3 text-3xl font-black uppercase text-white sm:text-4xl">
                   Empower the Next Generation
                 </h3>
@@ -44,7 +44,7 @@ export function MissionVisionSection() {
           <article className="grid items-stretch gap-6 lg:grid-cols-2 lg:gap-10">
             <div className="flex items-center p-2 sm:p-4 lg:order-1 lg:p-6">
               <div>
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-cyan-500">Our Vision</p>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-[#00ff88]">Our Vision</p>
                 <h3 className="mt-3 text-3xl font-black uppercase text-white sm:text-4xl">
                   Connect Talent to Opportunity
                 </h3>

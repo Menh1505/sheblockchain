@@ -39,18 +39,16 @@ html {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --accent: #8b5cf6;
-    /* purple for web3 */
-    --secondary: #3b82f6;
-    /* blue */
+    --accent: #00ff88;
+    --secondary: #00e676;
   }
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --accent: #8b5cf6;
-  --secondary: #3b82f6;
+  --accent: #00ff88;
+  --secondary: #00e676;
 }
 
 body {
@@ -64,7 +62,7 @@ body {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #106b34 #e8f3df;
+  scrollbar-color: #00ff88 #0d1a12;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -73,12 +71,12 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #e8f3df;
+  background: #0d1a12;
   border-radius: 999px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #106b34;
+  background: #00ff88;
   border-radius: 999px;
-  border: 2px solid #e8f3df;
+  border: 2px solid #0d1a12;
 }

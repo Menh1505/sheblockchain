@@ -25,11 +25,10 @@ export function Header({ isHeroActive }: HeaderProps) {
   return (
     <header id="header" className="fixed inset-x-0 top-0 z-50 w-full px-4 pt-4 sm:px-6 lg:px-8">
       <div
-        className={`mx-auto w-full rounded-4xl transition-all duration-300 ${
-          isHeroActive
-            ? "border border-gray-700 bg-gray-800/90 shadow-[0_14px_40px_rgba(16,63,47,0.10)] backdrop-blur"
-            : "border border-transparent bg-transparent shadow-none backdrop-blur-0"
-        }`}
+        className={`mx-auto w-full rounded-4xl transition-all duration-300 ${isHeroActive
+          ? "border border-[#00ff88]/20 bg-gray-800/90 shadow-[0_14px_40px_rgba(0,255,136,0.08)] backdrop-blur"
+          : "border border-transparent bg-transparent shadow-none backdrop-blur-0"
+          }`}
       >
         <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
           <Link href="#home" className="shrink-0">
@@ -48,7 +47,7 @@ export function Header({ isHeroActive }: HeaderProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-extrabold uppercase tracking-[0.14em] text-white transition hover:text-cyan-400"
+                className="text-sm font-extrabold uppercase tracking-[0.14em] text-white transition hover:text-[#00ff88]"
               >
                 {item.label}
               </a>
@@ -58,7 +57,7 @@ export function Header({ isHeroActive }: HeaderProps) {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden rounded-full border-2 border-white bg-cyan-600 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#8b5cf6] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#8b5cf6] sm:inline-flex"
+              className="hidden rounded-full border-2 border-[#00ff88] bg-[#00c853] px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#00ff88] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#00ff88] sm:inline-flex"
             >
               Get Started
             </a>
@@ -68,7 +67,7 @@ export function Header({ isHeroActive }: HeaderProps) {
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen((value) => !value)}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-gray-800 text-white shadow-[4px_4px_0_#8b5cf6] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#8b5cf6] lg:hidden"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-gray-800 text-white shadow-[4px_4px_0_#00ff88] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#00ff88] lg:hidden"
             >
               <span className="relative block h-4 w-5">
                 <span
@@ -101,7 +100,7 @@ export function Header({ isHeroActive }: HeaderProps) {
               <a
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="mt-2 inline-flex justify-center rounded-full border-2 border-black dark:border-white bg-cyan-600 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-black dark:text-white shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#8b5cf6]"
+                className="mt-2 inline-flex justify-center rounded-full border-2 border-[#00ff88] bg-[#00c853] px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#00ff88]"
               >
                 Get Started
               </a>
