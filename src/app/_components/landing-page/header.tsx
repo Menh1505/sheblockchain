@@ -6,12 +6,13 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "#home" },
+  { label: "Partners", href: "#partners" },
   { label: "Mission", href: "#mission" },
   { label: "Services", href: "#services" },
   { label: "Activities", href: "#activities" },
+  { label: "Advantages", href: "#advantages" },
   { label: "Team", href: "#team" },
-  { label: "Partners", href: "#partners" },
-  { label: "Contact", href: "#contact" },
+  { label: "Milestones", href: "#milestones" },
 ] as const;
 
 export function Header() {
@@ -32,7 +33,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav id="menu" className="hidden items-center gap-7 lg:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
