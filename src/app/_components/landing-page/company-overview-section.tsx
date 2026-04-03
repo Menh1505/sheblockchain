@@ -119,7 +119,7 @@ function ServiceCard({
             alt={service.title}
             width={200}
             height={160}
-            className="h-auto w-full max-w-[160px] lg:max-w-[200px] object-contain"
+            className="h-auto w-full max-w-40 lg:max-w-50 object-contain"
           />
         </div>
       </div>
