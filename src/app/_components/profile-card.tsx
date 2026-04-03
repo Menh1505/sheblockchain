@@ -42,7 +42,7 @@ export function ProfileCard({
       <div className="flex min-h-0 flex-1 flex-col justify-between gap-3 p-5">
         <div>
           <h3 className="text-2xl font-black uppercase leading-tight text-white">{name}</h3>
-          <p className="mt-2 mb-3 text-sm font-extrabold uppercase tracking-[0.16em] text-purple-400">{role}</p>
+          <p className="mt-2 mb-3 text-sm font-extrabold uppercase tracking-[0.16em] text-cyan-400">{role}</p>
           <p className="overflow-y-auto text-sm leading-6 text-gray-300">{description}</p>
         </div>
       </div>

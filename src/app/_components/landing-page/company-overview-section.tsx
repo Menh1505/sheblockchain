@@ -23,35 +23,35 @@ const cardVariants: Record<
   }
 > = {
   light: {
-    cardClassName: "bg-gray-800 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
-    titleClassName: "bg-purple-600 text-white",
+    cardClassName: "bg-gray-800 border-gray-700 shadow-[0_14px_0_#06B6D4] text-white",
+    titleClassName: "bg-cyan-600 text-white",
     textClassName: "text-gray-300",
     ctaClassName: "text-white",
-    iconWrapClassName: "bg-purple-600",
+    iconWrapClassName: "bg-cyan-600",
     iconClassName: "text-white",
   },
   green: {
-    cardClassName: "bg-purple-600 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
+    cardClassName: "bg-cyan-600 border-gray-700 shadow-[0_14px_0_#06B6D4] text-white",
     titleClassName: "bg-gray-900 text-white",
     textClassName: "text-gray-300",
     ctaClassName: "text-white",
-    iconWrapClassName: "bg-purple-600",
+    iconWrapClassName: "bg-cyan-600",
     iconClassName: "text-white",
   },
   dark: {
-    cardClassName: "bg-gray-900 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
+    cardClassName: "bg-gray-900 border-gray-700 shadow-[0_14px_0_#06B6D4] text-white",
     titleClassName: "bg-gray-800 text-white",
     textClassName: "text-gray-300",
     ctaClassName: "text-white",
-    iconWrapClassName: "bg-purple-600",
+    iconWrapClassName: "bg-cyan-600",
     iconClassName: "text-white",
   },
   mixed: {
-    cardClassName: "bg-gray-800 border-gray-700 shadow-[0_14px_0_#8b5cf6] text-white",
-    titleClassName: "bg-purple-600 text-white",
+    cardClassName: "bg-gray-800 border-gray-700 shadow-[0_14px_0_#06B6D4] text-white",
+    titleClassName: "bg-cyan-600 text-white",
     textClassName: "text-gray-300",
     ctaClassName: "text-white",
-    iconWrapClassName: "bg-purple-600",
+    iconWrapClassName: "bg-cyan-600",
     iconClassName: "text-white",
   },
 };
@@ -133,10 +133,10 @@ export function CompanyOverviewSection({ services }: CompanyOverviewSectionProps
   return (
     <section id="services" className="bg-gray-900 mx-auto scroll-mt-32 px-8 py-8 sm:px-10 lg:px-16 sm:mt-8 md:mt-14 lg:mt-26">
       <div className="mb-10 text-center">
-        <p className="text-xl font-black uppercase tracking-[0.2em] text-purple-400">What We Offer</p>
+        <p className="text-xl font-black uppercase tracking-[0.2em] text-cyan-400">What We Offer</p>
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Products and Services
-          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-purple-500" />
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-cyan-500" />
         </h2>
       </div>
 

@@ -33,6 +33,7 @@ const socialLinks = [
 export function Hero({ highlights }: HeroProps) {
   return (
     <section id="home" className="relative overflow-hidden scroll-mt-32 px-4 pb-4 pt-6 sm:px-6 lg:px-8 lg:pb-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 opacity-10" />
       <div className="absolute inset-0" />
       <div className="relative">
         <div className="grid h-full overflow-hidden rounded-[38px] border border-gray-700 bg-gray-800 lg:min-h-180 lg:grid-cols-[88px_minmax(0,1fr)_minmax(420px,0.92fr)]">
@@ -45,7 +46,7 @@ export function Hero({ highlights }: HeroProps) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={item.name}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-gray-700 text-purple-400 shadow-[4px_4px_0_#8b5cf6] transition hover:-translate-y-0.5"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-gray-700 text-cyan-400 shadow-[4px_4px_0_#06B6D4] transition hover:-translate-y-0.5"
                 >
                   {item.icon}
                 </a>
@@ -63,8 +64,8 @@ export function Hero({ highlights }: HeroProps) {
           <div className="flex h-full">
             <div className="flex w-full flex-col justify-between p-6 sm:p-8 lg:p-10">
               <div>
-                <div className="inline-flex items-center gap-3 rounded-full border border-gray-600 bg-gray-700 px-5 py-2 text-xs font-black uppercase tracking-[0.2em] text-purple-400">
-                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-purple-500" />
+                <div className="inline-flex items-center gap-3 rounded-full border border-gray-600 bg-gray-700 px-5 py-2 text-xs font-black uppercase tracking-[0.2em] text-cyan-400">
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-cyan-500" />
                   Welcome to S.H.E Blockchain
                 </div>
 
@@ -84,7 +85,7 @@ export function Hero({ highlights }: HeroProps) {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a
                     href="#mission"
-                    className="inline-flex items-center justify-center rounded-full border-2 border-white bg-purple-600 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#8b5cf6] transition hover:translate-x-px hover:translate-y-px hover:shadow-[3px_3px_0_#8b5cf6]"
+                    className="inline-flex items-center justify-center rounded-full border-2 border-white bg-cyan-600 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#06B6D4] transition hover:translate-x-px hover:translate-y-px hover:shadow-[3px_3px_0_#06B6D4]"
                   >
                     Our Vision &amp; Mission
                   </a>
@@ -92,10 +93,10 @@ export function Hero({ highlights }: HeroProps) {
                     href="https://www.youtube.com/watch?v=PAdBwqza7cE"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-3 rounded-full border border-gray-600 bg-gray-700 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-gray-600"
+                    className="inline-flex items-center justify-center gap-3 rounded-full border border-gray-600 bg-cyan-600 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-cyan-500"
                   >
                     <span>View Video</span>
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 text-white">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-cyan-600">
                       <svg viewBox="0 0 23.1 22.3" className="h-4 w-4 fill-current" aria-hidden="true">
                         <path d="M2.3,5.6c0-2.5,2-4.5,4.4-4.5c0.8,0,1.6,0.2,2.3,0.6l9.6,5.6c2.1,1.2,2.8,4,1.6,6.1c-0.4,0.7-0.9,1.2-1.6,1.6L9,20.5C6.9,21.8,4.2,21,3,18.9c-0.4-0.7-0.6-1.4-0.6-2.2L2.3,5.6z" />
                       </svg>

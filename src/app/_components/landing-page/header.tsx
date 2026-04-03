@@ -37,7 +37,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-extrabold uppercase tracking-[0.14em] text-white transition hover:text-purple-400"
+                className="text-sm font-extrabold uppercase tracking-[0.14em] text-white transition hover:text-cyan-400"
               >
                 {item.label}
               </a>
@@ -47,7 +47,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden rounded-full border-2 border-white bg-purple-600 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#8b5cf6] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#8b5cf6] sm:inline-flex"
+              className="hidden rounded-full border-2 border-white bg-cyan-600 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[4px_4px_0_#8b5cf6] transition hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_#8b5cf6] sm:inline-flex"
             >
               Get Started
             </a>
@@ -90,7 +90,7 @@ export function Header() {
               <a
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="mt-2 inline-flex justify-center rounded-full border-2 border-black dark:border-white bg-purple-600 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-black dark:text-white shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#8b5cf6]"
+                className="mt-2 inline-flex justify-center rounded-full border-2 border-black dark:border-white bg-cyan-600 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-black dark:text-white shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#8b5cf6]"
               >
                 Get Started
               </a>

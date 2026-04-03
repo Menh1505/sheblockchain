@@ -71,7 +71,7 @@ export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
       <div className="text-center mb-10">
         <h2 className="relative inline-block text-4xl font-black uppercase text-white sm:text-5xl">
           Our Activities
-          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-purple-500" />
+          <span className="absolute left-1/2 top-full mt-2 h-1 w-16 -translate-x-1/2 rounded-full bg-cyan-500" />
         </h2>
       </div>
 
@@ -99,7 +99,7 @@ export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
           type="button"
           aria-label="Previous activity"
           onClick={handlePrevious}
-          className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-800 text-purple-400 shadow-[4px_4px_0_#8b5cf6] transition hover:-translate-y-0.5"
+          className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-800 text-cyan-400 shadow-[4px_4px_0_#8b5cf6] transition hover:-translate-y-0.5"
         >
           <ArrowLeftIcon />
         </button>
@@ -111,7 +111,7 @@ export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
               type="button"
               aria-label={`Go to ${slide.title}`}
               onClick={() => setActiveIndex(index)}
-              className={`h-3 rounded-full transition-all ${activeIndex === index ? "w-10 bg-purple-500" : "w-3 bg-gray-600"
+              className={`h-3 rounded-full transition-all ${activeIndex === index ? "w-10 bg-cyan-500" : "w-3 bg-gray-600"
                 }`}
             />
           ))}
@@ -121,7 +121,7 @@ export function ActivitiesSection({ activities }: ActivitiesSectionProps) {
           type="button"
           aria-label="Next activity"
           onClick={handleNext}
-          className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-800 text-purple-400 shadow-[4px_4px_0_#8b5cf6] transition hover:-translate-y-0.5"
+          className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-gray-700 bg-gray-800 text-cyan-400 shadow-[4px_4px_0_#8b5cf6] transition hover:-translate-y-0.5"
         >
           <ArrowRightIcon />
         </button>
