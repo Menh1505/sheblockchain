@@ -12,6 +12,7 @@ import { MissionVisionSection } from "./mission-vision-section";
 import { PartnersSection } from "./partners-section";
 import { TeamSection } from "./team";
 import { NetworkCanvas } from "./network-canvas";
+import { SectionReveal } from "./section-reveal";
 import { useEffect, useRef, useState } from "react";
 
 const sectionAnchors = [
@@ -28,6 +29,8 @@ const sectionAnchors = [
 
 export function LandingPage() {
   const [isHeroActive, setIsHeroActive] = useState(true);
+  const [activeSection, setActiveSection] = useState(0);
+  const [direction, setDirection] = useState<1 | -1>(1);
   const bgRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
@@ -113,12 +116,15 @@ export function LandingPage() {
           afterLoad: (_origin, destination) => {
             setIsHeroActive(destination.anchor === "home");
             const idx = sectionAnchors.indexOf(destination.anchor as typeof sectionAnchors[number]);
+            setActiveSection(idx);
             (window as Window & { __sheParallax?: (i: number) => void }).__sheParallax?.(idx);
           },
-          onLeave: (_origin, destination) => {
+          onLeave: (origin, destination) => {
             setIsHeroActive(destination.anchor === "home");
-            const idx = sectionAnchors.indexOf(destination.anchor as typeof sectionAnchors[number]);
-            (window as Window & { __sheParallax?: (i: number) => void }).__sheParallax?.(idx);
+            const fromIdx = sectionAnchors.indexOf(origin.anchor as typeof sectionAnchors[number]);
+            const toIdx = sectionAnchors.indexOf(destination.anchor as typeof sectionAnchors[number]);
+            setDirection(toIdx > fromIdx ? 1 : -1);
+            (window as Window & { __sheParallax?: (i: number) => void }).__sheParallax?.(toIdx);
           },
         });
       });
@@ -168,42 +174,58 @@ export function LandingPage() {
         </div>
         <div className="section" data-menuanchor="partners">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
-            <PartnersSection partners={partners} />
+            <SectionReveal isActive={activeSection === 1} direction={direction} sectionKey="partners">
+              <PartnersSection partners={partners} />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="mission">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-start justify-center overflow-y-auto">
-            <MissionVisionSection />
+            <SectionReveal isActive={activeSection === 2} direction={direction} sectionKey="mission">
+              <MissionVisionSection />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="services">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-start justify-center overflow-y-auto">
-            <CompanyOverviewSection services={services} />
+            <SectionReveal isActive={activeSection === 3} direction={direction} sectionKey="services">
+              <CompanyOverviewSection services={services} />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="activities">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
-            <ActivitiesSection activities={activities} />
+            <SectionReveal isActive={activeSection === 4} direction={direction} sectionKey="activities">
+              <ActivitiesSection activities={activities} />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="advantages">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
-            <CompetitiveAdvantagesSection />
+            <SectionReveal isActive={activeSection === 5} direction={direction} sectionKey="advantages">
+              <CompetitiveAdvantagesSection />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="team">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
-            <TeamSection />
+            <SectionReveal isActive={activeSection === 6} direction={direction} sectionKey="team">
+              <TeamSection />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="milestones">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
-            <MilestonesSection />
+            <SectionReveal isActive={activeSection === 7} direction={direction} sectionKey="milestones">
+              <MilestonesSection />
+            </SectionReveal>
           </div>
         </div>
         <div className="section" data-menuanchor="contact">
           <div className="pt-(--landing-header-offset,96px) h-full w-full flex items-center justify-center">
-            <Footer />
+            <SectionReveal isActive={activeSection === 8} direction={direction} sectionKey="contact">
+              <Footer />
+            </SectionReveal>
           </div>
         </div>
       </div>

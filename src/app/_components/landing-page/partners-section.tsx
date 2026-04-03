@@ -48,12 +48,12 @@ export function PartnersSection({ partners }: PartnersSectionProps) {
   return (
     <section ref={ref} className="mx-auto w-full px-4 py-3 sm:px-6 lg:px-16">
       <div
-        className="flex flex-col justify-center rounded-4xl border border-white/8 bg-gray-900/60 px-8 py-8 shadow-[0_20px_80px_rgba(0,255,136,0.04)] backdrop-blur-sm lg:px-14 lg:py-10"
+        className="flex flex-col justify-center rounded-4xl border border-white/8 px-8 py-8 shadow-[0_20px_80px_rgba(0,255,136,0.04)] backdrop-blur-sm lg:px-14 lg:py-10"
         style={{ height: "calc(100vh - var(--landing-header-offset, 96px) - 1.5rem)" }}
       >
         {/* heading */}
         <motion.div
-          className="mb-10 text-center"
+          className="mb-4 text-center"
           initial={{ opacity: 0, y: -14 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -63,7 +63,7 @@ export function PartnersSection({ partners }: PartnersSectionProps) {
             Trusted Partners
             <span className="absolute left-1/2 top-full mt-2 h-px w-24 -translate-x-1/2 rounded-full bg-linear-to-r from-transparent via-[#00ff88] to-transparent" />
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-400">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-400">
             Collaborating with leading universities, blockchain ecosystems, and Web3 communities to build the next generation of talent.
           </p>
         </motion.div>
