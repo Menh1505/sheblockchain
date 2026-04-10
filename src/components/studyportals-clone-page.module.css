@@ -201,7 +201,7 @@
   max-width: 100%;
   margin: 0 0 40px;
   font-size: clamp(120px, 7vw, 110px);
-  line-height: 0.92;
+  line-height: calc(0.92em + 10px);
   letter-spacing: -0.05em;
 }
 
@@ -976,12 +976,18 @@
   text-decoration: none;
 }
 
+.footerDivider {
+  border: none;
+  border-top: 1px solid rgba(17, 19, 24, 0.1);
+  margin: 28px 0 0;
+}
+
 .footerBottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding-top: 34px;
+  padding-top: 24px;
 }
 
 .footerMeta {

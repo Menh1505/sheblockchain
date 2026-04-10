@@ -260,20 +260,6 @@ export function StudyportalsClonePage() {
 
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Build your future in Web3.</h1>
-
-          <div className={styles.heroCards}>
-            <Link href="#programs" className={styles.heroCard}>
-              <MiniIcon>IN</MiniIcon>
-              <strong>For individuals</strong>
-              <span>Explore Programs</span>
-            </Link>
-            <Link href="#partners" className={styles.heroCard}>
-              <MiniIcon>ST</MiniIcon>
-              <strong>For startups</strong>
-              <span>Partner With Us</span>
-            </Link>
-          </div>
-
           <p className={styles.heroCopy}>
             Education, talent, and partnerships for the next generation of blockchain builders.
             Learn faster. Connect smarter. Grow with a trusted Web3 ecosystem.
@@ -442,6 +428,8 @@ export function StudyportalsClonePage() {
             ))}
           </div>
         </div>
+
+        <hr className={styles.footerDivider} />
 
         <div className={styles.footerBottom}>
           <div className={styles.footerMeta}>
