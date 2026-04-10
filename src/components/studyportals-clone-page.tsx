@@ -1,7 +1,9 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Users, Handshake, Clock } from "lucide-react";
 import styles from "./studyportals-clone-page.module.css";
 import { MilestonesSection } from "./milestones-section";
 import { TeamSection } from "./team-section";
@@ -14,7 +16,7 @@ type NavItem = {
 };
 
 type Stat = {
-  icon: string;
+  icon: React.ReactNode;
   value: string;
   label: string;
 };
@@ -53,9 +55,9 @@ const navItems: NavItem[] = [
 ];
 
 const stats: Stat[] = [
-  { icon: "CL", value: "30+", label: "clients served" },
-  { icon: "PT", value: "50+", label: "ecosystem partners" },
-  { icon: "YR", value: "6+", label: "years in Web3" },
+  { icon: <Users size={32} strokeWidth={1.5} />, value: "30+", label: "clients served" },
+  { icon: <Handshake size={32} strokeWidth={1.5} />, value: "50+", label: "ecosystem partners" },
+  { icon: <Clock size={32} strokeWidth={1.5} />, value: "6+", label: "years in Web3" },
 ];
 
 const features: Feature[] = [
@@ -222,9 +224,8 @@ export function StudyportalsClonePage() {
       <header className={styles.header}>
         <div className={styles.brand}>
           <Image src="/she-logo.png" alt="S.H.E Blockchain" width={160} height={40} style={{ objectFit: "contain" }} />
+          <span className={styles.hiringPill}>Web3 EdTech</span>
         </div>
-
-        <span className={styles.hiringPill}>Web3 EdTech</span>
 
         <nav className={styles.nav}>
           {navItems.map((item) => (
