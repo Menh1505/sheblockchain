@@ -62,7 +62,7 @@ const stats: Stat[] = [
 
 const features: Feature[] = [
   {
-    eyebrow: "For individuals",
+    eyebrow: "",
     title: "Learn Web3 skills. Build real careers.",
     description:
       "For students, job seekers, beginners, and experts. Join practical programs, gain industry exposure, and connect with real opportunities in blockchain.",
@@ -70,7 +70,7 @@ const features: Feature[] = [
     image: "/mission/mission.png",
   },
   {
-    eyebrow: "For startups",
+    eyebrow: "",
     title: "Find talent, training, and trusted ecosystem support.",
     description:
       "For startups, blockchain projects, and organizations. Scale with advisory, upskilling, partnerships, and event-driven brand visibility.",
@@ -298,17 +298,13 @@ export function StudyportalsClonePage() {
           <section
             ref={fi === 0 ? refFeature1 : refFeature2}
             key={feature.title}
-            id={feature.eyebrow.includes("individuals") ? "students" : "institutions"}
+            id={fi === 0 ? "students" : "institutions"}
             className={`${styles.featureSection} ${feature.reverse ? styles.featureReverse : ""} ${fi === 0 ? "reveal-left" : "reveal-right"}`}
           >
             <div className={styles.featureText}>
-              <div className={styles.eyebrow}>
-                <MiniIcon>{feature.eyebrow.includes("individuals") ? "ID" : "SU"}</MiniIcon>
-                <span>{feature.eyebrow}</span>
-              </div>
               <h2>{feature.title}</h2>
               <p>{feature.description}</p>
-              <SectionButton href={feature.eyebrow.includes("individuals") ? "#services" : "#contact"}>
+              <SectionButton href={fi === 0 ? "#services" : "#contact"}>
                 {feature.cta}
               </SectionButton>
             </div>
@@ -316,7 +312,7 @@ export function StudyportalsClonePage() {
             <div className={styles.featureMedia}>
               <Image
                 src={feature.image}
-                alt={feature.eyebrow}
+                alt={feature.title}
                 fill
                 style={{ objectFit: "cover" }}
               />
