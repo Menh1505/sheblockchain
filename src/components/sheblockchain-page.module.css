@@ -63,7 +63,7 @@
 }
 
 .brandMark {
-  color: #ff633f;
+  color: #27692c;
   font-size: 22px;
   line-height: 1;
 }
@@ -77,8 +77,8 @@
   align-self: flex-start;
   padding: 3px 10px;
   border-radius: 999px;
-  background: #ffe7df;
-  color: #ff633f;
+  background: #e9f2ea;
+  color: #27692c;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -106,8 +106,8 @@
 }
 
 .navLink:hover {
-  background: rgba(25, 91, 215, 0.07);
-  color: #195bd7;
+  background: rgba(39, 132, 45, 0.07);
+  color: #27842d;
 }
 
 .caret {
@@ -125,19 +125,19 @@
   min-height: 42px;
   padding: 0 20px;
   border-radius: 8px;
-  background: #195bd7;
+  background: #27842d;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 10px 18px rgba(25, 91, 215, 0.16);
+  box-shadow: 0 10px 18px rgba(39, 132, 45, 0.16);
 }
 
 .secondaryButton {
   min-height: 44px;
   padding: 0 22px;
   background: #fff;
-  color: #195bd7;
+  color: #27842d;
   box-shadow: none;
 }
 
@@ -170,8 +170,8 @@
 /* left — red, z highest */
 .heroSlashCoral {
   background: linear-gradient(180deg,
-      rgba(255, 124, 100, 0.8) 0%,
-      rgba(255, 99, 63, 0.8) 100%);
+      rgba(39, 132, 45, 0.8) 0%,
+      rgba(39, 105, 44, 0.8) 100%);
   left: -200px;
   top: 100px;
   z-index: 3;
@@ -187,7 +187,7 @@
 
 /* right — blue, z lowest */
 .heroSlashBlue {
-  background: linear-gradient(180deg, #cddeff 0%, #195bd7 100%);
+  background: linear-gradient(180deg, #e9faea 0%, #27842d 100%);
   left: 100px;
   top: 300px;
   z-index: 1;
@@ -219,7 +219,7 @@
   padding: 28px 26px 22px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.95);
-  color: #195bd7;
+  color: #27842d;
   text-decoration: none;
   box-shadow: 0 18px 42px rgba(17, 19, 24, 0.06);
 }
@@ -235,7 +235,7 @@
 }
 
 .miniIcon {
-  color: #ff633f;
+  color: #27692c;
   font-size: 20px;
   line-height: 1;
 }
@@ -291,26 +291,26 @@
 }
 
 .statCard:nth-child(1)::before {
-  background: #ff633f;
+  background: #27692c;
 }
 
 .statCard:nth-child(2)::before {
-  background: #195bd7;
+  background: #27842d;
 }
 
 .statCard:nth-child(3)::before {
-  background: #ff633f;
+  background: #27692c;
 }
 
 .statIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ff633f;
+  color: #27692c;
 }
 
 .statCard:nth-child(2) .statIcon {
-  color: #195bd7;
+  color: #27842d;
 }
 
 .statCard strong {
@@ -359,7 +359,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #ff633f;
+  color: #27692c;
   font-size: 17px;
   font-weight: 600;
   margin-left: 5px;
@@ -593,7 +593,7 @@
 .toneblue {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 35%),
-    linear-gradient(135deg, #82acf4 0%, #195bd7 50%, #1d4db6 100%);
+    linear-gradient(135deg, #e9faea 0%, #27842d 50%, #27692c 100%);
 }
 
 .tonesteel {
@@ -729,7 +729,7 @@
 .storyCardBlue {
   background:
     linear-gradient(132deg, transparent 0 58%, rgba(255, 255, 255, 0.08) 58% 64%, transparent 64% 100%),
-    #195bd7;
+    #27842d;
   color: #fff;
 }
 
@@ -765,8 +765,8 @@
 }
 
 .storyCardBlue .primaryButton {
-  background: #f5f0eb;
-  color: #195bd7;
+  background: #e9f2ea;
+  color: #27842d;
   box-shadow: none;
 }
 
@@ -793,7 +793,7 @@
 .viewAllRow a,
 .resourcesFooter a,
 .inlineLink {
-  color: #195bd7;
+  color: #27842d;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -834,7 +834,7 @@
 
 .partnerGridItem:hover {
   filter: grayscale(0);
-  box-shadow: 0 4px 18px rgba(25, 91, 215, 0.12);
+  box-shadow: 0 4px 18px rgba(39, 132, 45, 0.12);
 }
 
 .partnerGridItem img {
@@ -866,7 +866,7 @@
   margin-bottom: 86px;
   background:
     linear-gradient(132deg, rgba(255, 255, 255, 0.08) 0 34%, transparent 34% 100%),
-    #195bd7;
+    #27842d;
   border-radius: 6px;
 }
 
@@ -940,7 +940,7 @@
   width: 24px;
   height: 24px;
   border-radius: 999px;
-  background: #d5e2ff;
+  background: #e9faea;
 }
 
 .footer {

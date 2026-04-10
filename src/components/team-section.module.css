@@ -15,7 +15,7 @@
     font-weight: 800;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #ff633f;
+    color: #27692c;
 }
 
 .h2 {
@@ -38,7 +38,7 @@
     width: 56px;
     height: 4px;
     border-radius: 999px;
-    background: #ff633f;
+    background: #27692c;
 }
 
 /* horizontal scroll */
@@ -46,7 +46,7 @@
     overflow-x: auto;
     /* hide scrollbar but keep scroll */
     scrollbar-width: thin;
-    scrollbar-color: rgba(25, 91, 215, 0.25) transparent;
+    scrollbar-color: rgba(39, 132, 45, 0.25) transparent;
     padding-bottom: 12px;
     /* fade edges */
     mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
@@ -62,7 +62,7 @@
 }
 
 .scrollWrap::-webkit-scrollbar-thumb {
-    background: rgba(25, 91, 215, 0.25);
+    background: rgba(39, 132, 45, 0.25);
     border-radius: 999px;
 }
 
@@ -86,7 +86,7 @@
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 36px rgba(25, 91, 215, 0.12);
+    box-shadow: 0 14px 36px rgba(39, 132, 45, 0.12);
 }
 
 .cardImage {
@@ -111,7 +111,7 @@
     margin: 0 0 10px;
     font-size: 13px;
     font-weight: 600;
-    color: #195bd7;
+    color: #27842d;
 }
 
 .cardDesc {

@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   icons: {
     icon: "/small-logo.png",
   },
+  openGraph: {
+    title: "S.H.E Blockchain",
+    description: "Education, talent, and partnerships for the next generation of blockchain builders.",
+    siteName: "S.H.E Blockchain",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "S.H.E Blockchain",
+    description: "Education, talent, and partnerships for the next generation of blockchain builders.",
+  },
 };
 
 export default function RootLayout({
