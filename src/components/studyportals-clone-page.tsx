@@ -49,9 +49,9 @@ type ResourceCard = {
 
 const navItems: NavItem[] = [
   { label: "Programs", href: "#programs" },
-  { label: "Services", href: "#services", hasCaret: true },
-  { label: "Partners", href: "#partners", hasCaret: true },
-  { label: "Mission", href: "#mission", hasCaret: true },
+  { label: "Services", href: "#services" },
+  { label: "Partners", href: "#partners" },
+  { label: "Mission", href: "#mission" },
 ];
 
 const stats: Stat[] = [
@@ -231,7 +231,6 @@ export function StudyportalsClonePage() {
           {navItems.map((item) => (
             <Link key={item.label} href={item.href} className={styles.navLink}>
               {item.label}
-              {item.hasCaret ? <Caret /> : null}
             </Link>
           ))}
         </nav>

@@ -362,6 +362,7 @@
   color: #ff633f;
   font-size: 17px;
   font-weight: 600;
+  margin-left: 5px;
 }
 
 .featureText h2,
@@ -701,6 +702,7 @@
 .sectionIntro {
   max-width: 760px;
   margin-bottom: 40px;
+  left: -10px;
 }
 
 .storyGrid {
