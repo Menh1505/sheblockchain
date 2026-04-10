@@ -282,9 +282,9 @@ export function StudyportalsClonePage() {
       </section>
 
       <section className={styles.statsSection}>
-        <div ref={refStats} className={`${styles.statsPanel} reveal`}>
+        <div ref={refStats} className={styles.statsPanel}>
           {stats.map((stat, i) => (
-            <article key={stat.label} className={`${styles.statCard} reveal reveal-delay-${i + 1 as 1 | 2 | 3}`}>
+            <article key={stat.label} className={styles.statCard}>
               <span className={styles.statIcon}>{stat.icon}</span>
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>

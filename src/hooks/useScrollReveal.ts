@@ -11,6 +11,13 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
         const el = ref.current;
         if (!el) return;
 
+        // Already visible on mount — reveal immediately, no animation needed
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.classList.add("revealed");
+            return;
+        }
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -18,7 +25,7 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
                     observer.disconnect();
                 }
             },
-            { threshold: 0.12, rootMargin: "0px 0px -60px 0px", ...options }
+            { threshold: 0.05, rootMargin: "0px 0px -40px 0px", ...options }
         );
 
         observer.observe(el);
