@@ -1,5 +1,5 @@
-import { StudyportalsClonePage } from "@/components/studyportals-clone-page";
+import { SheBlockchainPage } from "@/components/sheblockchain-page";
 
 export default function Home() {
-  return <StudyportalsClonePage />;
+  return <SheBlockchainPage />;
 }

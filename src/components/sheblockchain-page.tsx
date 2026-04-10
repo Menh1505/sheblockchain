@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Users, Handshake, Clock } from "lucide-react";
-import styles from "./studyportals-clone-page.module.css";
+import styles from "./sheblockchain-page.module.css";
 import { MilestonesSection } from "./milestones-section";
 import { TeamSection } from "./team-section";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -207,7 +207,7 @@ function SectionButton({ href, children }: { href: string; children: string }) {
   );
 }
 
-export function StudyportalsClonePage() {
+export function SheBlockchainPage() {
   const refStats = useScrollReveal();
   const refFeature1 = useScrollReveal<HTMLElement>();
   const refFeature2 = useScrollReveal<HTMLElement>();
