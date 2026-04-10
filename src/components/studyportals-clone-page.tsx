@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./studyportals-clone-page.module.css";
+import { MilestonesSection } from "./milestones-section";
+import { TeamSection } from "./team-section";
 
 type NavItem = {
   label: string;
@@ -19,9 +21,7 @@ type Feature = {
   title: string;
   description: string;
   cta: string;
-  mediaLabel: string;
-  mediaTone: string;
-  cropClass?: string;
+  image: string;
   reverse?: boolean;
 };
 
@@ -30,8 +30,7 @@ type StoryCard = {
   description: string;
   label: string;
   accent?: "light" | "blue";
-  mediaLabel: string;
-  cropClass?: string;
+  image: string;
 };
 
 type ResourceCard = {
@@ -63,9 +62,7 @@ const features: Feature[] = [
     description:
       "For students, job seekers, beginners, and experts. Join practical programs, gain industry exposure, and connect with real opportunities in blockchain.",
     cta: "Explore Programs",
-    mediaLabel: "Individuals program image placeholder",
-    mediaTone: "warm",
-    cropClass: "cropStudents",
+    image: "/mission/mission.png",
   },
   {
     eyebrow: "For startups",
@@ -73,9 +70,7 @@ const features: Feature[] = [
     description:
       "For startups, blockchain projects, and organizations. Scale with advisory, upskilling, partnerships, and event-driven brand visibility.",
     cta: "Partner With Us",
-    mediaLabel: "Startup support image placeholder",
-    mediaTone: "campus",
-    cropClass: "cropCampus",
+    image: "/mission/vision.png",
     reverse: true,
   },
 ];
@@ -87,8 +82,7 @@ const storyCards: StoryCard[] = [
       "Expert consulting shaped by 6+ years in Web3. Get practical guidance on strategy, growth, and ecosystem positioning.",
     label: "Service",
     accent: "light",
-    mediaLabel: "Advisory services image placeholder",
-    cropClass: "cropPortsmouth",
+    image: "/act/act1.svg",
   },
   {
     title: "Training Programs",
@@ -96,8 +90,7 @@ const storyCards: StoryCard[] = [
       "Customized blockchain education for communities, teams, and institutions. Built for clarity, adoption, and measurable outcomes.",
     label: "Service",
     accent: "blue",
-    mediaLabel: "Training programs image placeholder",
-    cropClass: "cropPolyu",
+    image: "/act/act2.svg",
   },
 ];
 
@@ -216,8 +209,7 @@ export function StudyportalsClonePage() {
 
       <header className={styles.header}>
         <div className={styles.brand}>
-          <span className={styles.brandMark}>S</span>
-          <span className={styles.brandText}>S.H.E Blockchain</span>
+          <Image src="/she-logo.png" alt="S.H.E Blockchain" width={160} height={40} style={{ objectFit: "contain" }} />
         </div>
 
         <span className={styles.hiringPill}>Web3 EdTech</span>
@@ -307,12 +299,14 @@ export function StudyportalsClonePage() {
               </SectionButton>
             </div>
 
-            <MediaPlaceholder
-              label={feature.mediaLabel}
-              tone={feature.mediaTone}
-              cropClass={feature.cropClass}
-              className={styles.featureMedia}
-            />
+            <div className={styles.featureMedia}>
+              <Image
+                src={feature.image}
+                alt={feature.eyebrow}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </section>
         ))}
       </section>
@@ -343,12 +337,9 @@ export function StudyportalsClonePage() {
               className={`${styles.storyCard} ${card.accent === "blue" ? styles.storyCardBlue : styles.storyCardLight
                 }`}
             >
-              <MediaPlaceholder
-                label={card.mediaLabel}
-                tone={card.accent === "blue" ? "blue" : "steel"}
-                cropClass={card.cropClass}
-                className={styles.storyMedia}
-              />
+              <div className={styles.storyMedia}>
+                <Image src={card.image} alt={card.title} fill style={{ objectFit: "cover" }} />
+              </div>
               <div className={styles.storyContent}>
                 <span className={styles.storyPill}>{card.label}</span>
                 <h3>{card.title}</h3>
@@ -377,24 +368,20 @@ export function StudyportalsClonePage() {
         </div>
 
         <div className={styles.partnerBoard}>
-          <div className={styles.partnerSlashBlue} />
-          <div className={styles.partnerSlashCoral} />
-          <MediaPlaceholder
-            label="Partner logos wall"
-            tone="article"
-            cropClass="cropPartners"
-            className={styles.partnerBoardMedia}
-          />
+          <div className={styles.partnerGrid}>
+            {partnerLogos.map((logo) => (
+              <div key={logo.alt} className={styles.partnerGridItem}>
+                <Image src={logo.src} alt={logo.alt} width={100} height={44} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="mission" className={styles.impactSection}>
-        <MediaPlaceholder
-          label="S.H.E Blockchain mission image"
-          tone="charity"
-          cropClass="cropImpact"
-          className={styles.impactMedia}
-        />
+        <div className={styles.impactMedia}>
+          <Image src="/act/act3.svg" alt="S.H.E Blockchain mission" fill style={{ objectFit: "cover" }} />
+        </div>
         <div className={styles.impactText}>
           <h2>Empowering talent. Connecting opportunity.</h2>
           <p>
@@ -417,58 +404,19 @@ export function StudyportalsClonePage() {
             Partner With Us
           </Link>
         </div>
-        <MediaPlaceholder
-          label="Competitive advantages banner"
-          tone="awards"
-          cropClass="cropAwards"
-          className={styles.awardsMedia}
-        />
-      </section>
-
-      <section id="resources" className={styles.resourcesSection}>
-        <div className={styles.sectionIntro}>
-          <span className={styles.sectionLabel}>Milestones</span>
-          <h2>From first launch to global growth vision</h2>
-        </div>
-
-        <div className={styles.resourcesGrid}>
-          {resources.map((resource) => (
-            <article
-              key={resource.title}
-              className={`${styles.resourceCard} ${resource.large ? styles.resourceCardLarge : ""}`}
-            >
-              <MediaPlaceholder
-                label={resource.mediaLabel}
-                tone={resource.large ? "earth" : "article"}
-                cropClass={resource.cropClass}
-                className={styles.resourceMedia}
-              />
-              <div className={styles.resourceBody}>
-                <span className={styles.storyPill}>{resource.type}</span>
-                <h3>{resource.title}</h3>
-                <p>{resource.description}</p>
-                <Link href="#contact" className={styles.inlineLink}>
-                  Explore Programs
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className={styles.resourcesFooter}>
-          <Link href="#contact">See the next chapter</Link>
-          <div className={styles.sliderDots}>
-            <span />
-            <span />
-          </div>
+        <div className={styles.awardsMedia}>
+          <Image src="/act/act4.svg" alt="Why choose S.H.E Blockchain" fill style={{ objectFit: "cover" }} />
         </div>
       </section>
+
+      <TeamSection />
+
+      <MilestonesSection />
 
       <footer id="contact" className={styles.footer}>
         <div className={styles.footerTop}>
           <div className={styles.brand}>
-            <span className={styles.brandMark}>S</span>
-            <span className={styles.brandText}>S.H.E Blockchain</span>
+            <Image src="/she-logo.png" alt="S.H.E Blockchain" width={160} height={40} style={{ objectFit: "contain" }} />
           </div>
 
           <div className={styles.footerGrid}>

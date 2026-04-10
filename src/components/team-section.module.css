@@ -1,0 +1,132 @@
+.section {
+    width: min(1180px, calc(100% - 64px));
+    margin: 0 auto;
+    padding-bottom: 96px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #ff633f;
+}
+
+.h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    font-size: clamp(28px, 3vw, 46px);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    color: #111318;
+}
+
+.h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    width: 56px;
+    height: 4px;
+    border-radius: 999px;
+    background: #ff633f;
+}
+
+/* horizontal scroll */
+.scrollWrap {
+    overflow-x: auto;
+    /* hide scrollbar but keep scroll */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(25, 91, 215, 0.25) transparent;
+    padding-bottom: 12px;
+    /* fade edges */
+    mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+.scrollWrap::-webkit-scrollbar {
+    height: 4px;
+}
+
+.scrollWrap::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollWrap::-webkit-scrollbar-thumb {
+    background: rgba(25, 91, 215, 0.25);
+    border-radius: 999px;
+}
+
+.track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    padding: 4px 2px 4px;
+}
+
+/* card */
+.card {
+    width: 280px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(17, 19, 24, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(25, 91, 215, 0.12);
+}
+
+.cardImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 3.5;
+    background: #e8edf5;
+}
+
+.cardBody {
+    padding: 18px 20px 22px;
+}
+
+.cardName {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111318;
+}
+
+.cardRole {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #195bd7;
+}
+
+.cardDesc {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #555c6a;
+}
+
+@media (max-width: 720px) {
+    .section {
+        width: calc(100% - 32px);
+    }
+
+    .card {
+        width: 240px;
+    }
+}
