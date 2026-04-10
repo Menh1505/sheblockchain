@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./studyportals-clone-page.module.css";
 import { MilestonesSection } from "./milestones-section";
 import { TeamSection } from "./team-section";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 type NavItem = {
   label: string;
@@ -203,6 +206,15 @@ function SectionButton({ href, children }: { href: string; children: string }) {
 }
 
 export function StudyportalsClonePage() {
+  const refStats = useScrollReveal();
+  const refFeature1 = useScrollReveal<HTMLElement>();
+  const refFeature2 = useScrollReveal<HTMLElement>();
+  const refLogoBand = useScrollReveal<HTMLElement>();
+  const refStory = useScrollReveal<HTMLElement>();
+  const refPartner = useScrollReveal<HTMLElement>();
+  const refImpact = useScrollReveal<HTMLElement>();
+  const refAwards = useScrollReveal<HTMLElement>();
+
   return (
     <main className={styles.pageShell}>
       <div className={styles.backgroundStripes} aria-hidden="true" />
@@ -269,9 +281,9 @@ export function StudyportalsClonePage() {
       </section>
 
       <section className={styles.statsSection}>
-        <div className={styles.statsPanel}>
-          {stats.map((stat) => (
-            <article key={stat.label} className={styles.statCard}>
+        <div ref={refStats} className={`${styles.statsPanel} reveal`}>
+          {stats.map((stat, i) => (
+            <article key={stat.label} className={`${styles.statCard} reveal reveal-delay-${i + 1 as 1 | 2 | 3}`}>
               <span className={styles.statIcon}>{stat.icon}</span>
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
@@ -281,11 +293,12 @@ export function StudyportalsClonePage() {
       </section>
 
       <section id="programs" className={styles.featuresWrap}>
-        {features.map((feature) => (
+        {features.map((feature, fi) => (
           <section
+            ref={fi === 0 ? refFeature1 : refFeature2}
             key={feature.title}
             id={feature.eyebrow.includes("individuals") ? "students" : "institutions"}
-            className={`${styles.featureSection} ${feature.reverse ? styles.featureReverse : ""}`}
+            className={`${styles.featureSection} ${feature.reverse ? styles.featureReverse : ""} ${fi === 0 ? "reveal-left" : "reveal-right"}`}
           >
             <div className={styles.featureText}>
               <div className={styles.eyebrow}>
@@ -311,7 +324,7 @@ export function StudyportalsClonePage() {
         ))}
       </section>
 
-      <section className={styles.logoBand}>
+      <section ref={refLogoBand} className={`${styles.logoBand} reveal`}>
         <h3>50+ partners across education, community, and Web3</h3>
         <div className={styles.logoMarqueeWrap}>
           <div className={styles.logoMarqueeTrack}>
@@ -324,7 +337,7 @@ export function StudyportalsClonePage() {
         </div>
       </section>
 
-      <section id="services" className={styles.storySection}>
+      <section ref={refStory} id="services" className={`${styles.storySection} reveal`}>
         <div className={styles.sectionIntro}>
           <span className={styles.sectionLabel}>Services</span>
           <h2>Support built for growth, adoption, and long-term Web3 success</h2>
@@ -357,7 +370,7 @@ export function StudyportalsClonePage() {
         </div>
       </section>
 
-      <section id="partners" className={styles.partnershipSection}>
+      <section ref={refPartner} id="partners" className={`${styles.partnershipSection} reveal`}>
         <div className={styles.partnershipText}>
           <h2>Networking, partnerships, and visibility that move Web3 forward</h2>
           <p>
@@ -378,7 +391,7 @@ export function StudyportalsClonePage() {
         </div>
       </section>
 
-      <section id="mission" className={styles.impactSection}>
+      <section ref={refImpact} id="mission" className={`${styles.impactSection} reveal`}>
         <div className={styles.impactMedia}>
           <Image src="/act/act3.svg" alt="S.H.E Blockchain mission" fill style={{ objectFit: "cover" }} />
         </div>
@@ -393,7 +406,7 @@ export function StudyportalsClonePage() {
         </div>
       </section>
 
-      <section className={styles.awardsSection}>
+      <section ref={refAwards} className={`${styles.awardsSection} reveal-scale`}>
         <div className={styles.awardsText}>
           <h2>Why teams choose S.H.E Blockchain</h2>
           <p>
