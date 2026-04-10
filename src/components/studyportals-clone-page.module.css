@@ -145,7 +145,7 @@
   display: grid;
   grid-template-columns: 1.0fr 1.0fr;
   gap: 34px;
-  padding: 22px 64px 240px 0;
+  padding: 22px 64px 280px 0;
   align-items: start;
 }
 
