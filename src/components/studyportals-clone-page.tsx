@@ -93,7 +93,7 @@ const storyCards: StoryCard[] = [
       "Customized blockchain education for communities, teams, and institutions. Built for clarity, adoption, and measurable outcomes.",
     label: "Service",
     accent: "blue",
-    image: "/act/act2.svg",
+    image: "/act/act5.svg",
   },
 ];
 
@@ -429,7 +429,7 @@ export function StudyportalsClonePage() {
       <footer id="contact" className={styles.footer}>
         <div className={styles.footerTop}>
           <div className={styles.brand}>
-            <Image src="/she-logo.png" alt="S.H.E Blockchain" width={160} height={40} style={{ objectFit: "contain" }} />
+            <Image src="/she-logo.png" alt="S.H.E Blockchain" width={320} height={80} style={{ objectFit: "contain" }} />
           </div>
 
           <div className={styles.footerGrid}>

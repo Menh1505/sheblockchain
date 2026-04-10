@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Studyportals Landing Clone",
   description: "Landing page clone built from a reference screenshot.",
+  icons: {
+    icon: "/small-logo.png",
+  },
 };
 
 export default function RootLayout({
