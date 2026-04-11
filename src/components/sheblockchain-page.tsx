@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Users, Handshake, Clock } from "lucide-react";
@@ -217,6 +218,8 @@ export function SheBlockchainPage() {
   const refImpact = useScrollReveal<HTMLElement>();
   const refAwards = useScrollReveal<HTMLElement>();
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main className={styles.pageShell}>
       <div className={styles.backgroundStripes} aria-hidden="true" />
@@ -238,7 +241,36 @@ export function SheBlockchainPage() {
         <Link href="#contact" className={styles.contactButton}>
           Partner With Us
         </Link>
+
+        {/* hamburger — only visible ≤920px */}
+        <button
+          className={styles.hamburger}
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+        >
+          <span className={`${styles.bar} ${menuOpen ? styles.barTop : ""}`} />
+          <span className={`${styles.bar} ${menuOpen ? styles.barMid : ""}`} />
+          <span className={`${styles.bar} ${menuOpen ? styles.barBot : ""}`} />
+        </button>
       </header>
+
+      {/* mobile drawer */}
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
+        {navItems.map((item) => (
+          <Link
+            key={item.label}
+            href={item.href}
+            className={styles.mobileNavLink}
+            onClick={() => setMenuOpen(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+        <Link href="#contact" className={styles.mobileCta} onClick={() => setMenuOpen(false)}>
+          Partner With Us
+        </Link>
+      </div>
 
       <section className={styles.heroSection}>
         <div className={styles.heroArt}>

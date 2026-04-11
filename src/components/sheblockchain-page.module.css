@@ -393,6 +393,7 @@
   aspect-ratio: 4 / 3;
   justify-self: stretch;
   width: 100%;
+  min-width: none;
   height: auto;
   overflow: hidden;
   border-radius: 12px;
@@ -1008,64 +1009,247 @@
   font-weight: 700;
 }
 
-@media (max-width: 1180px) {
-  .header {
-    grid-template-columns: 1fr auto;
-    gap: 16px;
-  }
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
 
-  .nav {
-    display: none;
-  }
+.hamburger:hover {
+  background: rgba(25, 91, 215, 0.07);
+}
 
-  .heroSection,
-  .featureSection,
-  .featureReverse,
-  .partnershipSection,
-  .impactSection,
-  .awardsSection,
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #111318;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+.barTop {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barMid {
+  opacity: 0;
+}
+
+.barBot {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile drawer ── */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  z-index: 100;
+  flex-direction: column;
+  gap: 4px;
+  padding: 24px 24px 40px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(17, 19, 24, 0.1);
+  transform: translateY(-12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s;
+}
+
+.mobileMenuOpen {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobileNavLink {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111318;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.mobileNavLink:hover {
+  background: rgba(25, 91, 215, 0.06);
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  background: #195bd7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 1780px) {
+
   .footerTop,
   .resourcesGrid {
     grid-template-columns: 1fr;
   }
 
-  .heroArt {
-    min-height: 320px;
+  .featureMedia {
+    max-width: 560px;
+    max-height: 420px;
+    justify-self: center;
   }
 
   .heroSlashCoral,
   .heroDiamond,
   .heroSlashBlue {
-    width: 140px;
-    height: 340px;
+    position: absolute;
+    border-radius: 14px;
+    transform: rotate(45deg);
+    /* shared dimensions — tall narrow rectangle */
+    width: 220px;
+    height: 1100px;
+    overflow: hidden;
   }
 
+  /* left — red, z highest */
+  .heroSlashCoral {
+    background: linear-gradient(180deg,
+        rgba(39, 132, 45, 0.8) 0%,
+        rgba(39, 105, 44, 0.8) 100%);
+    left: -200px;
+    top: 100px;
+    z-index: 3;
+  }
+
+  /* middle — image, z mid */
   .heroDiamond {
-    left: 76px;
-    top: -14px;
+    left: 200px;
+    top: -20px;
+    z-index: 2;
+    background: #273e55;
   }
 
+  /* right — blue, z lowest */
   .heroSlashBlue {
-    left: 152px;
-    top: 64px;
+    background: linear-gradient(180deg, #e9faea 0%, #27842d 100%);
+    left: 100px;
+    top: 300px;
+    z-index: 1;
   }
 
-  .heroCards {
-    flex-direction: column;
-    max-width: 320px;
+
+}
+
+@media (max-width: 1600px) {
+
+  .heroSlashCoral,
+  .heroDiamond,
+  .heroSlashBlue {
+    position: absolute;
+    border-radius: 14px;
+    transform: rotate(45deg);
+    /* shared dimensions — tall narrow rectangle */
+    width: 220px;
+    height: 1000px;
+    overflow: hidden;
   }
 
-  .statsPanel,
-  .footerGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .heroSlashCoral {
+    background: linear-gradient(180deg,
+        rgba(39, 132, 45, 0.8) 0%,
+        rgba(39, 105, 44, 0.8) 100%);
+    left: -300px;
+    top: 100px;
+    z-index: 3;
   }
 
-  .storyCard {
-    grid-template-columns: 1fr;
+  /* middle — image, z mid */
+  .heroDiamond {
+    left: 100px;
+    top: -20px;
+    z-index: 2;
+    background: #273e55;
+  }
+
+  /* right — blue, z lowest */
+  .heroSlashBlue {
+    background: linear-gradient(180deg, #e9faea 0%, #27842d 100%);
+    left: 00px;
+    top: 300px;
+    z-index: 1;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1300px) {
+
+  .heroSection {
+    grid-template-columns: 1fr;
+    padding: 22px 24px 0;
+  }
+
+  .heroArt {
+    order: 2;
+    min-height: 420px;
+  }
+
+  .heroContent {
+    order: 1;
+  }
+
+  .heroSlashCoral,
+  .heroDiamond,
+  .heroSlashBlue {
+    position: absolute;
+    border-radius: 14px;
+    transform: rotate(45deg);
+    width: 220px;
+    height: 1000px;
+    overflow: hidden;
+  }
+
+  .heroSlashCoral {
+    background: linear-gradient(180deg,
+        rgba(39, 132, 45, 0.8) 0%,
+        rgba(39, 105, 44, 0.8) 100%);
+    left: -300px;
+    top: 0px;
+    z-index: 3;
+  }
+
+  .heroDiamond {
+    left: 100px;
+    top: -100px;
+    z-index: 2;
+    background: #273e55;
+  }
+
+  .heroSlashBlue {
+    background: linear-gradient(180deg, #e9faea 0%, #27842d 100%);
+    left: 0px;
+    top: 200px;
+    z-index: 1;
+  }
+}
+
+
+@media (max-width: 920px) {
 
   .header,
   .featuresWrap,
@@ -1078,17 +1262,11 @@
   .statsSection,
   .logoBand h3 {
     width: min(100% - 32px, 1180px);
+    padding: 2vh;
   }
 
-  .brandText {
-    font-size: 27px;
-  }
 
-  .heroTitle {
-    font-size: 42px;
-  }
 
-  .heroCopy,
   .featureText p,
   .impactText p,
   .awardsText p,
@@ -1098,6 +1276,10 @@
     font-size: 15px;
   }
 
+  .partnershipSection,
+  .impactSection,
+  .featureSection,
+  .featureReverse,
   .statsPanel,
   .logoRow,
   .footerGrid,
@@ -1128,5 +1310,24 @@
   .footerBottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 920px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav,
+  .contactButton {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
   }
 }
