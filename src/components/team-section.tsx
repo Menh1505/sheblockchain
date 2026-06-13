@@ -32,7 +32,7 @@ const teamMembers = [
     {
         imageSrc: "/team/ryan.jpg",
         name: "Ryan Pham",
-        role: "Co-founder",
+        role: "Core-Contributor",
         description: "Entrepreneur and product builder. 12 years of experience in Blockchain & Crypto",
     },
 ] as const;
