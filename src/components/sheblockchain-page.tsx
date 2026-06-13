@@ -238,7 +238,7 @@ export function SheBlockchainPage() {
           ))}
         </nav>
 
-        <Link href="#contact" className={styles.contactButton}>
+        <Link href="https://form.jotform.com/240488364264058" className={styles.contactButton}>
           Partner With Us
         </Link>
 
