@@ -214,6 +214,8 @@ export function SheBlockchainPage() {
   const refFeature2 = useScrollReveal<HTMLElement>();
   const refLogoBand = useScrollReveal<HTMLElement>();
   const refStory = useScrollReveal<HTMLElement>();
+  const refStoryCard1 = useScrollReveal<HTMLElement>();
+  const refStoryCard2 = useScrollReveal<HTMLElement>();
   const refPartner = useScrollReveal<HTMLElement>();
   const refImpact = useScrollReveal<HTMLElement>();
   const refAwards = useScrollReveal<HTMLElement>();
@@ -361,8 +363,9 @@ export function SheBlockchainPage() {
           {storyCards.map((card) => (
             <article
               key={card.title}
+              ref={card.title === "Advisory Services" ? refStoryCard1 : refStoryCard2}
               className={`${styles.storyCard} ${card.accent === "blue" ? styles.storyCardBlue : styles.storyCardLight
-                }`}
+                } ${card.title === "Advisory Services" ? "reveal-left reveal-delay-1" : "reveal-right reveal-delay-2"}`}
             >
               <div className={styles.storyMedia}>
                 <Image src={card.image} alt={card.title} fill style={{ objectFit: "cover" }} />
