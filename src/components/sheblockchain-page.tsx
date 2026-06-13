@@ -229,7 +229,6 @@ export function SheBlockchainPage() {
       <header className={styles.header}>
         <div className={styles.brand}>
           <Image src="/she-logo.png" alt="S.H.E Blockchain" width={160} height={40} style={{ objectFit: "contain" }} />
-          <span className={styles.hiringPill}>Web3 EdTech</span>
         </div>
 
         <nav className={styles.nav}>
