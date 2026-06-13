@@ -5,12 +5,6 @@ import styles from "./team-section.module.css";
 
 const teamMembers = [
     {
-        imageSrc: "/team/cris.jpg",
-        name: "Cris D Tran",
-        role: "Head of Growth, Vietnam",
-        description: "Founding Advisor of FLI Vietnam. 8 years of experience in Blockchain & Crypto.",
-    },
-    {
         imageSrc: "/team/jasontran.jpg",
         name: "Jason Tran",
         role: "Founder & CEO of Wallacy",
@@ -32,7 +26,7 @@ const teamMembers = [
     {
         imageSrc: "/team/ryan.jpg",
         name: "Ryan Pham",
-        role: "Core-Contributor",
+        role: "Co-founder",
         description: "Entrepreneur and product builder. 12 years of experience in Blockchain & Crypto",
     },
 ] as const;
