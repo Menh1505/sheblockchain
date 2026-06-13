@@ -18,22 +18,10 @@ const teamMembers = [
             "17 years in Management, Marketing, Product Development and Fundraising. 5 years of experience in Blockchain & Crypto",
     },
     {
-        imageSrc: "/team/pavendo.jpg",
-        name: "Paven Do",
-        role: "Co-founder & CEO of Octan Network and BrownFi",
-        description: "6 years of experience as a blockchain scientist and entrepreneur.",
-    },
-    {
         imageSrc: "/team/phongdao.jpg",
         name: "Phong Dao",
         role: "Lawyer",
         description: "Managing lawyer at Investpush Legal. 7 years of experience in Blockchain & Crypto",
-    },
-    {
-        imageSrc: "/team/phongnguyen.jpg",
-        name: "Phong Nguyen",
-        role: "Master of Computer Science",
-        description: "Operation Center Manager at Ozitem Group, France. 7 years of experience in Blockchain & Crypto",
     },
     {
         imageSrc: "/team/thuylinh.jpg",
